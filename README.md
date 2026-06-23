@@ -74,13 +74,6 @@ npm run build
 3. Configure the EmailJS environment variables in the Project Settings.
 4. Click **Deploy**.
 
-## 📸 Screenshots
-
-*Below are placeholder slots for repository preview screenshots:*
-
-| Desktop Showcase | Mobile Sidebar |
-| :---: | :---: |
-| ![Desktop Preview](https://raw.githubusercontent.com/Vignesh-Salian/vignesh-portfolio/main/public/profile.png) | ![Mobile Preview](https://raw.githubusercontent.com/Vignesh-Salian/vignesh-portfolio/main/public/profile.png) |
 
 ## 📬 Contact Information
 

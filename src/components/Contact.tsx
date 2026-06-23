@@ -127,7 +127,7 @@ export default function Contact() {
       <div className="flex items-center gap-2 mb-10">
         <Sparkles className="w-5 h-5 text-purple-400" />
         <h2 className="font-space font-bold text-2xl sm:text-3xl text-white tracking-wide">
-          Let's Work Together
+          Let&apos;s Work Together
         </h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
@@ -140,10 +140,10 @@ export default function Contact() {
             <div>
               <span className="text-xs font-bold text-purple-400 uppercase tracking-widest block mb-2">Get in touch</span>
               <h3 className="text-xl font-space font-bold text-white mb-4">
-                Let's talk about your next project.
+                Let&apos;s talk about your next project.
               </h3>
               <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-8 font-medium">
-                I'm currently open to internships, research collaborations, freelance projects, and full-time opportunities. If you have an idea, project, or research initiative you'd like to discuss, feel free to reach out.
+                I&apos;m currently open to internships, research collaborations, freelance projects, and full-time opportunities. If you have an idea, project, or research initiative you&apos;d like to discuss, feel free to reach out.
               </p>
 
               {/* Direct Details */}
@@ -215,7 +215,7 @@ export default function Contact() {
             <div className="mb-6">
               <span className="text-xs font-bold text-purple-400 uppercase tracking-widest block mb-2">Send a message</span>
               <h3 className="text-xl font-space font-bold text-white">
-                I'd love to hear from you.
+                I&apos;d love to hear from you.
               </h3>
             </div>
             

@@ -148,7 +148,7 @@ export default function BeyondAlgorithms() {
           ✨ Beyond Algorithms
         </h2>
         <p className="text-purple-400/90 italic font-medium text-sm sm:text-base font-space">
-          "Engineering trains the mind; art fuels the imagination."
+          &quot;Engineering trains the mind; art fuels the imagination.&quot;
         </p>
         <p className="text-gray-400 text-sm sm:text-base max-w-[750px] leading-relaxed">
           While I enjoy building intelligent systems and research-driven applications, I also express creativity through pencil sketching. Drawing helps me develop patience, focus, and attention to detail—qualities that complement my engineering mindset.
@@ -376,7 +376,7 @@ export default function BeyondAlgorithms() {
             <PenTool className="w-8 h-8 text-purple-400 flex-shrink-0 animate-pulse" />
             <div className="flex flex-col items-center">
               <p className="text-gray-300 text-sm sm:text-base italic leading-relaxed font-medium">
-                "Creativity and engineering are two sides of the same coin. One builds systems, the other builds imagination."
+                &quot;Creativity and engineering are two sides of the same coin. One builds systems, the other builds imagination.&quot;
               </p>
               <span className="text-xs font-bold text-purple-400 mt-2 tracking-wide uppercase">
                 ✏️ — Vignesh N Salian

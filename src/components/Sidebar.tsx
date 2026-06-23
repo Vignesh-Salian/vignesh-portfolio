@@ -295,9 +295,9 @@ export default function Sidebar() {
           </div>
 
           <div className="mt-5 border-t border-white/5 pt-4">
-            <h4 className="text-xs font-bold text-gray-200">Let's build something</h4>
+            <h4 className="text-xs font-bold text-gray-200">Let&apos;s build something</h4>
             <p className="text-[11px] text-gray-400 mt-1 leading-relaxed">
-              I'm always open to discussing new opportunities and exciting projects.
+              I&apos;m always open to discussing new opportunities and exciting projects.
             </p>
             {/* Status Badge */}
             <div className="mt-3.5 flex items-center gap-2 bg-emerald-500/[0.04] border border-emerald-500/15 px-3 py-1.5 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.05)] w-full justify-center">

@@ -75,6 +75,10 @@ npm run build
 4. Click **Deploy**.
 
 
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ## 📬 Contact Information
 
 - **Email**: salianvignesh05@gmail.com

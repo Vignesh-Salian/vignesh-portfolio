@@ -353,3 +353,9 @@ export default function About() {
       <span>Completion Certificate</span>
     </motion.a>
   </div>
+            </div>
+          </div>
+        </motion.div>
+    </section>
+  );
+}

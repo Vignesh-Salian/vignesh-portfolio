@@ -196,12 +196,12 @@ export default function About() {
                   GoPerch Innovations Pvt. Ltd.
                 </div>
                 <div className="text-[11px] text-[#94A3B8] mt-1 flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-purple-400" /> May 2026 – Present
+                  <Calendar className="w-3.5 h-3.5 text-purple-400" /> May 2026 – July 2026
                 </div>
               </div>
               
               <div className="flex flex-wrap gap-1.5 mt-1">
-                {["React", "Next.js", "Node.js", "APIs", "Databases"].map((tech) => (
+                {["React", "Next.js", "FastAPI", "PostgreSQL", "Full Stack"].map((tech) => (
                   <span 
                     key={tech} 
                     className="px-2 py-0.5 rounded bg-white/[0.03] border border-white/[0.08] text-slate-300 text-[10px] font-medium hover:bg-white/[0.06] transition-colors"
@@ -276,11 +276,11 @@ export default function About() {
                   <div className="flex flex-wrap items-center gap-3 mt-1.5">
                     <div className="text-[#94A3B8] text-[14px] flex items-center gap-2">
                       <Image src="/calendar_icon_official.png" alt="Calendar" width={18} height={18} className="rounded-md drop-shadow-[0_0_6px_rgba(139,92,246,0.3)] select-none" />
-                      <span>May 2026 — Present</span>
+                      <span>May 2026 — July 2026</span>
                     </div>
                     <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold whitespace-nowrap shadow-[0_0_15px_rgba(16,185,129,0.15)]">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      <span>🟢 Offer Letter Received • May 2026</span>
+                      <span>🟢 Internship Completed • July 2026</span>
                     </div>
                   </div>
                 </div>
@@ -291,19 +291,19 @@ export default function About() {
             <ul className="relative z-10 flex flex-col gap-3 ml-1 text-[#B8B8C5] text-sm sm:text-base leading-[1.8]">
               <li className="flex items-start gap-3">
                 <span className="text-purple-400 mt-2 text-[10px]">●</span>
-                <span>Selected as Full Stack Developer Intern at GoPerch Innovations Pvt. Ltd.</span>
+                <span>Successfully completed a Full Stack Developer Internship at GoPerch Innovations Pvt. Ltd.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-purple-400 mt-2 text-[10px]">●</span>
-                <span>Working with React, Next.js, backend APIs and databases.</span>
+                <span>Developed and maintained enterprise-grade web applications using React, Next.js, FastAPI, SQLAlchemy, and PostgreSQL.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-purple-400 mt-2 text-[10px]">●</span>
-                <span>Building and testing scalable modern web applications.</span>
+                <span>Built and integrated scalable REST APIs, implemented role-based access control, optimized database operations, and collaborated on real-world enterprise software.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-purple-400 mt-2 text-[10px]">●</span>
-                <span>Collaborating on real-world full stack projects.</span>
+                <span>Fixed production bugs, performed end-to-end testing, resolved Git merge conflicts, and collaborated with the development team using Git and GitHub.</span>
               </li>
             </ul>
 
@@ -311,28 +311,31 @@ export default function About() {
             <div className="relative z-10 flex flex-wrap gap-2.5">
               <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-medium shadow-[0_0_10px_rgba(6,182,212,0.1)]">React</span>
               <span className="px-3 py-1 rounded-full bg-slate-500/10 border border-slate-500/20 text-slate-300 text-xs font-medium shadow-[0_0_10px_rgba(148,163,184,0.1)]">Next.js</span>
+              <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-medium shadow-[0_0_10px_rgba(16,185,129,0.1)]">FastAPI</span>
+              <span className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-medium shadow-[0_0_10px_rgba(59,130,246,0.1)]">PostgreSQL</span>
               <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-medium shadow-[0_0_10px_rgba(168,85,247,0.1)]">Full Stack</span>
-              <span className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-medium shadow-[0_0_10px_rgba(59,130,246,0.1)]">APIs</span>
-              <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-medium shadow-[0_0_10px_rgba(16,185,129,0.1)]">Databases</span>
             </div>
 
             {/* Actions */}
           <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4 mt-4 border-t border-white/[0.05] pt-6">
     <motion.a
-      href="https://drive.google.com/file/d/1vKAPAXLWOSuNPVDywPAPcg7gMp7qZ78g/view?usp=sharing"
+      href="https://drive.google.com/file/d/1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm/view"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="View Completion Letter"
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.98 }}
       className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:via-indigo-500 hover:to-blue-500 border border-purple-500/30 text-white text-sm font-semibold shadow-[0_0_20px_rgba(139,92,246,0.25)] hover:shadow-[0_0_30px_rgba(139,92,246,0.45)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
     >
       <ExternalLink className="w-4 h-4" />
-      <span>View Offer Letter</span>
+      <span>View Completion Letter</span>
     </motion.a>
     
     <motion.a
-      href="https://drive.google.com/file/d/1vKAPAXLWOSuNPVDywPAPcg7gMp7qZ78g/view?usp=sharing"
-      download
+      href="https://drive.google.com/uc?export=download&id=1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Download Completion Letter PDF"
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.98 }}
       className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-white/[0.03] hover:bg-purple-500/[0.05] border border-white/[0.08] hover:border-purple-500/30 text-slate-200 hover:text-white text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]"
@@ -342,15 +345,16 @@ export default function About() {
     </motion.a>
 
     <motion.a
-      href="https://drive.google.com/file/d/1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm/view?usp=sharing"
+      href="https://drive.google.com/file/d/1vKAPAXLWOSuNPVDywPAPcg7gMp7qZ78g/view?usp=sharing"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="View Offer Letter"
       whileHover={{ scale: 1.02, y: -2 }}
       whileTap={{ scale: 0.98 }}
       className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-white/[0.03] hover:bg-purple-500/[0.05] border border-white/[0.08] hover:border-purple-500/30 text-slate-200 hover:text-white text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]"
     >
       <Trophy className="w-4 h-4" />
-      <span>Completion Certificate</span>
+      <span>Offer Letter</span>
     </motion.a>
   </div>
             </div>

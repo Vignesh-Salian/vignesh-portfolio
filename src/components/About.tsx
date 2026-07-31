@@ -317,45 +317,39 @@ export default function About() {
             </div>
 
             {/* Actions */}
-            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4 mt-4 border-t border-white/[0.05] pt-6">
-              <motion.a
-                href="https://drive.google.com/file/d/1vKAPAXLWOSuNPVDywPAPcg7gMp7qZ78g/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:via-indigo-500 hover:to-blue-500 border border-purple-500/30 text-white text-sm font-semibold shadow-[0_0_20px_rgba(139,92,246,0.25)] hover:shadow-[0_0_30px_rgba(139,92,246,0.45)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>View Offer Letter</span>
-              </motion.a>
-              
-              <motion.a
-                href="https://drive.google.com/file/d/1vKAPAXLWOSuNPVDywPAPcg7gMp7qZ78g/view?usp=sharing"
-                download
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-white/[0.03] hover:bg-purple-500/[0.05] border border-white/[0.08] hover:border-purple-500/30 text-slate-200 hover:text-white text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]"
-              >
-                <Download className="w-4 h-4" />
-                <span>Download PDF</span>
-              </motion.a>
+          <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4 mt-4 border-t border-white/[0.05] pt-6">
+    <motion.a
+      href="https://drive.google.com/file/d/1vKAPAXLWOSuNPVDywPAPcg7gMp7qZ78g/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:via-indigo-500 hover:to-blue-500 border border-purple-500/30 text-white text-sm font-semibold shadow-[0_0_20px_rgba(139,92,246,0.25)] hover:shadow-[0_0_30px_rgba(139,92,246,0.45)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+    >
+      <ExternalLink className="w-4 h-4" />
+      <span>View Offer Letter</span>
+    </motion.a>
+    
+    <motion.a
+      href="https://drive.google.com/file/d/1vKAPAXLWOSuNPVDywPAPcg7gMp7qZ78g/view?usp=sharing"
+      download
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-white/[0.03] hover:bg-purple-500/[0.05] border border-white/[0.08] hover:border-purple-500/30 text-slate-200 hover:text-white text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]"
+    >
+      <Download className="w-4 h-4" />
+      <span>Download PDF</span>
+    </motion.a>
 
-              <div className="w-full sm:w-auto">
-              <a href="https://drive.google.com/file/d/1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto h-[52px] px-5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.08] border border-white/10 text-slate-200 text-sm font-semibold flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200"
-              >
-              <Trophy className="w-4 h-4 text-slate-300" />
-              <span>Completion Certificate</span>
-                    </a>
-                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </section>
-  );
-}
+    <motion.a
+      href="https://drive.google.com/file/d/1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-white/[0.03] hover:bg-purple-500/[0.05] border border-white/[0.08] hover:border-purple-500/30 text-slate-200 hover:text-white text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_25px_rgba(139,92,246,0.25)]"
+    >
+      <Trophy className="w-4 h-4" />
+      <span>Completion Certificate</span>
+    </motion.a>
+  </div>

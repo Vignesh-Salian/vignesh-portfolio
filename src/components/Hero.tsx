@@ -143,7 +143,7 @@ export default function Hero() {
               <ArrowRight className="w-[18px] h-[18px] ml-2" />
             </button>
 
-            <a href="/resume.pdf" download className="neon-btn-secondary w-full sm:w-auto px-8 h-[54px] rounded-[16px] flex justify-center items-center">
+            <a href="/Vignesh_N_Salian_Resume.pdf" download="Vignesh_N_Salian_Resume.pdf" className="neon-btn-secondary w-full sm:w-auto px-8 h-[54px] rounded-[16px] flex justify-center items-center">
               Download Resume
               <Download className="w-[18px] h-[18px] ml-2" />
             </a>

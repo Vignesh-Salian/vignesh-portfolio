@@ -341,22 +341,16 @@ export default function About() {
                 <span>Download PDF</span>
               </motion.a>
 
-              <div className="relative group/tooltip w-full sm:w-auto">
-                <button
-                  disabled
-                  className="w-full sm:w-auto h-[52px] px-5 rounded-2xl bg-white/[0.01] border border-white/[0.04] text-slate-500 text-sm font-semibold flex items-center justify-center gap-2 cursor-not-allowed"
-                >
-                  <Trophy className="w-4 h-4 text-slate-600" />
-                  <span>Completion Certificate</span>
-                  <span className="text-[9px] bg-slate-500/10 px-1.5 py-0.5 rounded border border-slate-500/20 text-slate-400 font-bold uppercase tracking-wider">
-                    Coming Soon
-                  </span>
-                </button>
-                
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2.5 rounded-xl bg-black/90 border border-white/10 text-white text-[10px] text-center leading-normal opacity-0 pointer-events-none group-hover/tooltip:opacity-100 transition-opacity duration-200 z-30 shadow-xl pointer-events-none">
-                  Certificate will be available after successful completion of the internship.
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/90" />
-                </div>
+              <div className="w-full sm:w-auto">
+              <a href="https://drive.google.com/file/d/1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto h-[52px] px-5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.08] border border-white/10 text-slate-200 text-sm font-semibold flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200"
+              >
+              <Trophy className="w-4 h-4 text-slate-300" />
+              <span>Completion Certificate</span>
+                    </a>
+                 </div>
               </div>
             </div>
           </div>

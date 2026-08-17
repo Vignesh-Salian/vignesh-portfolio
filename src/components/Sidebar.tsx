@@ -201,15 +201,15 @@ export default function Sidebar() {
             <div className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-[#00f0ff] opacity-75 group-hover:opacity-100 transition-opacity" />
             <div className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-2 border-r-2 border-[#ff007f] opacity-75 group-hover:opacity-100 transition-opacity" />
 
-            {/* Large Prominent Authentic Portrait with Generous Boundary */}
-            <div className="relative w-44 h-44 rounded-3xl p-[2px] bg-gradient-to-br from-[#00f0ff] via-[#8a2be2] to-[#ff007f] shadow-[0_0_35px_rgba(0,240,255,0.45)]">
+            {/* Large Prominent Authentic Portrait */}
+            <div className="relative w-36 h-36 sm:w-38 sm:h-38 rounded-3xl p-[2px] bg-gradient-to-br from-[#00f0ff] via-[#8a2be2] to-[#ff007f] shadow-[0_0_30px_rgba(0,240,255,0.45)]">
               <div className="w-full h-full rounded-[22px] overflow-hidden relative bg-[#070c18]">
                 <Image 
                   src="/profile_original.png" 
                   alt="Vignesh N Salian" 
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="176px"
+                  sizes="152px"
                   priority
                 />
               </div>

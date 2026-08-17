@@ -1,5 +1,6 @@
+"use client";
+
 import Sidebar from "@/components/Sidebar";
-import Particles from "@/components/Particles";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
@@ -7,28 +8,46 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import BeyondAlgorithms from "@/components/BeyondAlgorithms";
 import Contact from "@/components/Contact";
+import CyberCursor from "@/components/CyberCursor";
+import Particles from "@/components/Particles";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen relative">
-      {/* Canvas space particles backdrop */}
+    <div className="min-h-screen bg-[#03050d] text-white selection:bg-[#00f0ff] selection:text-black relative cyber-grid">
+      {/* Interactive Desktop Cyber Cursor */}
+      <CyberCursor />
+
+      {/* Cyber Ambient Floating Particle Field */}
       <Particles />
 
-      {/* Sticky navigation & profile sidebar */}
+      {/* Cyberpunk HUD Sidebar (Desktop fixed left, Mobile topbar & drawer) */}
       <Sidebar />
 
-      {/* Main viewport panels */}
-      <main className="flex-1 w-full lg:pl-80 pt-16 lg:pt-0 z-10">
-        <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-12 flex flex-col">
+      {/* Main Content Flow */}
+      <div className="lg:pl-80 w-full transition-all duration-300 relative z-10">
+        <main className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-0.5 sm:pt-1.5 pb-6 sm:pb-8 flex flex-col gap-8 sm:gap-10">
+          {/* 1. Hero Section */}
           <Hero />
+
+          {/* 2. About Me Section */}
           <About />
+
+          {/* 3. Tech Arsenal / Skills Section */}
           <Skills />
-          <Projects />
+
+          {/* 4. Experience & Education Timeline */}
           <Experience />
+
+          {/* 5. Featured Projects Showcase */}
+          <Projects />
+
+          {/* 6. Beyond Algorithms / Digital Archive */}
           <BeyondAlgorithms />
+
+          {/* 8. Contact Section */}
           <Contact />
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }

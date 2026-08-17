@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, ChevronRight, Sparkles, FileText, BookOpen, GraduationCap, Download, ExternalLink, Award, LucideIcon } from "lucide-react";
+import { sounds } from "@/lib/soundFx";
 
 interface ExperienceAction {
   text: string;
@@ -45,13 +47,13 @@ const experiences: ExperienceItem[] = [
       "Fixed production bugs, performed end-to-end testing, resolved Git merge conflicts, and collaborated with the development team using Git and GitHub."
     ],
     skills: ["React", "Next.js", "FastAPI", "PostgreSQL", "Full Stack"],
-    dotColor: "bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] ring-purple-500/20",
-    badgeBorder: "border-purple-500/20 hover:border-purple-500/40 text-purple-300 hover:shadow-[0_0_10px_rgba(168,85,247,0.2)]",
-    bulletColor: "text-purple-400",
-    shadowColor: "hover:border-purple-500/30 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)]",
+    dotColor: "border-[#ff007f] text-[#ff007f] shadow-[0_0_12px_rgba(255,0,127,0.4)]",
+    badgeBorder: "border-[#ff007f]/30 text-[#ff007f] bg-[#ff007f]/10",
+    bulletColor: "text-[#ff007f]",
+    shadowColor: "hover:border-[#ff007f]/40 hover:shadow-[0_0_25px_rgba(255,0,127,0.15)]",
     statusBadge: "Internship Completed",
-    statusBadgeColor: "bg-emerald-500/10 border-emerald-500/20 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.15)]",
-    statusPulseColor: "bg-emerald-400",
+    statusBadgeColor: "bg-[#00ffa3]/10 border-[#00ffa3]/30 text-[#00ffa3] shadow-[0_0_12px_rgba(0,255,163,0.15)]",
+    statusPulseColor: "bg-[#00ffa3]",
     actions: [
       {
         text: "View Completion Letter",
@@ -86,13 +88,13 @@ const experiences: ExperienceItem[] = [
       "Focused on camera calibration, precision optimization, and real-time processing."
     ],
     skills: ["Python", "OpenCV", "Computer Vision", "Research"],
-    dotColor: "bg-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)] group-hover:shadow-[0_0_25px_rgba(245,158,11,0.8)] ring-amber-500/20",
-    badgeBorder: "border-amber-500/20 hover:border-amber-500/40 text-amber-300 hover:shadow-[0_0_10px_rgba(245,158,11,0.2)]",
-    bulletColor: "text-amber-400",
-    shadowColor: "hover:border-amber-500/30 hover:shadow-[0_0_30px_rgba(245,158,11,0.08)]",
+    dotColor: "border-[#00f0ff] text-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.4)]",
+    badgeBorder: "border-[#00f0ff]/30 text-[#00f0ff] bg-[#00f0ff]/10",
+    bulletColor: "text-[#00f0ff]",
+    shadowColor: "hover:border-[#00f0ff]/40 hover:shadow-[0_0_25px_rgba(0,240,255,0.15)]",
     statusBadge: "Published",
-    statusBadgeColor: "bg-emerald-500/10 border-emerald-500/20 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.15)]",
-    statusPulseColor: "bg-emerald-400",
+    statusBadgeColor: "bg-[#00ffa3]/10 border-[#00ffa3]/30 text-[#00ffa3] shadow-[0_0_12px_rgba(0,255,163,0.15)]",
+    statusPulseColor: "bg-[#00ffa3]",
     actions: [
       {
         text: "Read Research Paper",
@@ -122,13 +124,13 @@ const experiences: ExperienceItem[] = [
       "Paper accepted for Springer ICTIS 2026 publication."
     ],
     skills: ["Deep Learning", "Computer Vision", "Python", "Research"],
-    dotColor: "bg-fuchsia-500 shadow-[0_0_15px_rgba(217,70,239,0.5)] group-hover:shadow-[0_0_25px_rgba(217,70,239,0.8)] ring-fuchsia-500/20",
-    badgeBorder: "border-fuchsia-500/20 hover:border-fuchsia-500/40 text-fuchsia-300 hover:shadow-[0_0_10px_rgba(217,70,239,0.2)]",
-    bulletColor: "text-fuchsia-400",
-    shadowColor: "hover:border-fuchsia-500/30 hover:shadow-[0_0_30px_rgba(217,70,239,0.08)]",
+    dotColor: "border-[#8a2be2] text-[#c084fc] shadow-[0_0_12px_rgba(138,43,226,0.4)]",
+    badgeBorder: "border-[#8a2be2]/30 text-[#c084fc] bg-[#8a2be2]/15",
+    bulletColor: "text-[#c084fc]",
+    shadowColor: "hover:border-[#8a2be2]/40 hover:shadow-[0_0_25px_rgba(138,43,226,0.15)]",
     statusBadge: "Accepted",
-    statusBadgeColor: "bg-purple-500/10 border-purple-500/20 text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.15)]",
-    statusPulseColor: "bg-purple-400",
+    statusBadgeColor: "bg-[#8a2be2]/15 border-[#8a2be2]/30 text-[#c084fc] shadow-[0_0_12px_rgba(138,43,226,0.15)]",
+    statusPulseColor: "bg-[#8a2be2]",
     actions: [
       {
         text: "View Publication",
@@ -155,7 +157,7 @@ const experiences: ExperienceItem[] = [
       "Pursuing B.Tech in Information Science & Engineering.",
       <span key="gpa">
         Maintaining a{" "}
-        <span className="px-2 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/30 font-semibold shadow-[0_0_12px_rgba(59,130,246,0.25)] text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 inline-flex items-center gap-1.5">
+        <span className="px-2 py-0.5 rounded-md bg-[#00f0ff]/10 border border-[#00f0ff]/30 font-bold text-[#00f0ff] inline-block shadow-[0_0_8px_rgba(0,240,255,0.2)]">
           CGPA of 8.58
         </span>
       </span>,
@@ -164,10 +166,10 @@ const experiences: ExperienceItem[] = [
       "Passionate about building intelligent systems and solving real-world problems."
     ],
     skills: ["Python", "DSA", "Databases", "Machine Learning", "Computer Vision"],
-    dotColor: "bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] group-hover:shadow-[0_0_25px_rgba(59,130,246,0.8)] ring-blue-500/20",
-    badgeBorder: "border-blue-500/20 hover:border-blue-500/40 text-blue-300 hover:shadow-[0_0_10px_rgba(59,130,246,0.2)]",
-    bulletColor: "text-blue-400",
-    shadowColor: "hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.08)]",
+    dotColor: "border-[#ffb800] text-[#ffb800] shadow-[0_0_12px_rgba(255,184,0,0.4)]",
+    badgeBorder: "border-[#ffb800]/30 text-[#ffb800] bg-[#ffb800]/10",
+    bulletColor: "text-[#ffb800]",
+    shadowColor: "hover:border-[#ffb800]/40 hover:shadow-[0_0_25px_rgba(255,184,0,0.15)]",
   }
 ];
 
@@ -176,192 +178,243 @@ export default function Experience() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
+      transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const },
     },
   };
 
   return (
-    <section id="experience" className="py-20 border-t border-white/5 relative">
+    <section id="experience" className="py-8 sm:py-10 border-t border-[#00f0ff]/20 relative">
       {/* Background ambient light glow */}
-      <div className="absolute top-[20%] right-0 w-[40%] h-[40%] bg-purple-500/5 blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-[20%] left-0 w-[30%] h-[35%] bg-blue-500/3 blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#8a2be2]/10 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 left-0 w-80 h-80 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
 
-      {/* Section Header */}
-      <div className="space-y-3 mb-24">
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-bold text-purple-400 uppercase tracking-widest">✨ JOURNEY</span>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+        {/* Section Header */}
+        <div className="space-y-1.5 mb-8">
+          <div className="flex items-center gap-2">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[10px] font-mono font-bold text-[#00ffa3]">
+              <Sparkles className="w-3 h-3" />
+              <span>JOURNEY // PROGRESSION_TIMELINE</span>
+            </div>
+          </div>
+          <h2 className="font-mono font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+            ✦ Experience &amp; Education
+          </h2>
+          <p className="text-xs sm:text-sm text-gray-400 max-w-[650px] leading-relaxed font-mono">
+            A timeline of my professional software engineering internship, academic AI research publications, and education.
+          </p>
         </div>
-        <h2 className="font-space font-bold text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-purple-300 tracking-tight">
-          ✦ Experience & Education
-        </h2>
-        <p className="text-sm sm:text-base text-gray-400 max-w-[650px] leading-relaxed font-medium">
-          A timeline of my professional software engineering internship, academic AI research publications, and education.
-        </p>
-      </div>
 
-      {/* Timeline Wrapper */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="relative pl-10 sm:pl-12 flex flex-col gap-14"
-      >
-        {/* Timeline Line with gradient */}
-        <div className="absolute left-[18px] sm:left-[20px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-purple-500 via-blue-500 to-cyan-500/10" />
-
-        {experiences.map((exp) => {
-          const IconComponent = exp.icon;
-          return (
-            <motion.div
-              key={exp.id}
-              variants={itemVariants}
-              className="relative flex flex-col gap-3 group"
-            >
-              {/* Timeline Node Dot/Badge (Centering line inside w-8 h-8 dot: center is exactly 18px on mobile, 20px on desktop) */}
-              <div 
-                className={`absolute -left-[38px] sm:-left-[44px] top-2.5 w-8 h-8 rounded-full flex items-center justify-center border-[3px] border-[#030014] ${exp.dotColor} ring-4 ring-transparent hover:ring-current z-10 transition-all duration-300 group-hover:scale-110`}
+        {/* Timeline Wrapper */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="relative pl-6 sm:pl-10 flex flex-col gap-6 sm:gap-7 border-l-2 border-[#00f0ff]/25 ml-2 sm:ml-4"
+        >
+          {experiences.map((exp) => {
+            const IconComponent = exp.icon;
+            return (
+              <motion.div
+                key={exp.id}
+                variants={itemVariants}
+                className="relative flex flex-col gap-2 group"
               >
-                <IconComponent className="w-3.5 h-3.5 text-white" />
-              </div>
+                {/* Timeline Node Dot */}
+                <div 
+                  className={`absolute -left-[38px] sm:-left-[54px] top-3 w-8 h-8 rounded-xl flex items-center justify-center border-2 bg-[#070c18] ${exp.dotColor} z-10 transition-all duration-300 group-hover:scale-105`}
+                >
+                  <IconComponent className="w-3.5 h-3.5" />
+                </div>
 
-              {/* Timeline Content Card */}
-              <motion.div 
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className={`glass-panel p-6 sm:p-8 rounded-2xl bg-[#0a0a10]/80 backdrop-blur-xl border border-white/[0.05] transition-all duration-300 ${exp.shadowColor}`}
-              >
-                {/* Header info */}
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-5">
-                  <div>
-                    <h3 className="font-space font-bold text-lg sm:text-xl text-white group-hover:text-purple-400 transition-colors duration-300">
-                      {exp.company}
-                    </h3>
-                    <p className="text-xs sm:text-sm font-semibold text-purple-300 mt-1">
-                      {exp.role}
-                    </p>
-                  </div>
-                  
-                  {/* Duration & Status Badges */}
-                  <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto shrink-0">
-                    {exp.statusBadge && (
-                      <div className={`flex items-center gap-1.5 text-[10px] sm:text-xs font-semibold py-1.5 px-3 rounded-full border ${exp.statusBadgeColor || "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"}`}>
-                        <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${exp.statusPulseColor || "bg-emerald-400"}`} />
-                        <span>{exp.statusBadge}</span>
+                {/* Timeline Content Card */}
+                <motion.div 
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                  className={`p-4 sm:p-5 rounded-2xl bg-[#070c18]/95 backdrop-blur-2xl border border-white/[0.08] transition-all duration-300 ${exp.shadowColor} shadow-[0_0_25px_rgba(0,0,0,0.6)] relative overflow-hidden`}
+                >
+                  {/* Cyber Corner Notches */}
+                  <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-[#00f0ff] opacity-30 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-[#ff007f] opacity-30 group-hover:opacity-100 transition-opacity" />
+
+                  {/* Header info */}
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 mb-3">
+                    <div className="flex items-center gap-3">
+                      {exp.id === 1 && (
+                        <div 
+                          onMouseEnter={() => {
+                            try { sounds.playPowerUp(); } catch {}
+                          }}
+                          className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040814] border border-[#00f0ff]/40 p-1.5 flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(0,240,255,0.35)] group/bird cursor-pointer overflow-hidden"
+                          title="GoPerch Cyber Bird"
+                        >
+                          {/* Radial Cyber Ambient Glow */}
+                          <div className="absolute inset-0 bg-gradient-to-tr from-[#00f0ff]/20 via-[#8a2be2]/15 to-[#ff007f]/20 rounded-2xl blur-md group-hover/bird:opacity-100 transition-opacity" />
+
+                          {/* Pulsing Cyber Energy Ring */}
+                          <motion.div
+                            animate={{
+                              scale: [1, 1.25, 1],
+                              opacity: [0.3, 0.7, 0.3],
+                            }}
+                            transition={{
+                              duration: 2.5,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                            }}
+                            className="absolute inset-0 rounded-2xl border border-[#00f0ff]/40 pointer-events-none"
+                          />
+
+                          {/* Cyber Corner Notches on Logo Box */}
+                          <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none" />
+                          <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#ff007f] pointer-events-none" />
+
+                          {/* Dynamic Running / Soaring Bird Body */}
+                          <motion.div
+                            animate={{
+                              y: [0, -3, 2, 0],
+                              scale: [1, 1.06, 0.98, 1],
+                              rotate: [0, -2, 2, 0],
+                            }}
+                            whileHover={{
+                              scale: 1.18,
+                              rotate: -4,
+                              filter: "brightness(1.5) drop-shadow(0 0 15px #00f0ff)",
+                            }}
+                            transition={{
+                              duration: 3.0,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                            }}
+                            className="relative z-10 w-full h-full flex items-center justify-center"
+                          >
+                            <Image
+                              src="/goperch_logo_final_v5.png"
+                              alt="GoPerch"
+                              width={44}
+                              height={44}
+                              className="object-contain select-none drop-shadow-[0_0_12px_rgba(0,240,255,0.8)] transition-all duration-300"
+                              priority
+                            />
+                          </motion.div>
+
+                          {/* Trailing Cyber Energy Streak on Hover */}
+                          <motion.div 
+                            className="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#00f0ff] to-[#ff007f] rounded-full pointer-events-none opacity-0 group-hover/bird:opacity-100 group-hover/bird:translate-x-12 transition-all duration-700"
+                          />
+                        </div>
+                      )}
+                      <div>
+                        <h3 className="font-mono font-bold text-sm sm:text-base text-white group-hover:text-[#00f0ff] transition-colors duration-300">
+                          {exp.company}
+                        </h3>
+                        <p className="text-xs font-semibold text-[#c084fc] font-mono mt-0.5">
+                          {exp.role}
+                        </p>
                       </div>
-                    )}
-                    <div className="flex items-center gap-1.5 text-xs text-slate-300 font-semibold bg-white/[0.03] py-1.5 px-3.5 rounded-full border border-white/[0.06] shadow-[0_0_15px_rgba(255,255,255,0.02)]">
-                      <Calendar className="w-3.5 h-3.5 text-purple-400" />
-                      <span>{exp.duration}</span>
+                    </div>
+                    
+                    {/* Duration & Status Badges */}
+                    <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto shrink-0 font-mono">
+                      {exp.statusBadge && (
+                        <div className={`flex items-center gap-1.5 text-[10px] font-semibold py-0.5 px-2.5 rounded-full border ${exp.statusBadgeColor || "bg-[#00ffa3]/10 border-[#00ffa3]/30 text-[#00ffa3]"}`}>
+                          <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${exp.statusPulseColor || "bg-[#00ffa3]"}`} />
+                          <span>{exp.statusBadge}</span>
+                        </div>
+                      )}
+                      <div className="flex items-center gap-1.5 text-[11px] text-gray-300 font-semibold bg-black/40 py-0.5 px-2.5 rounded-lg border border-white/10">
+                        <Calendar className="w-3 h-3 text-[#00f0ff]" />
+                        <span>{exp.duration}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Details list */}
-                <ul className="flex flex-col gap-2.5 mb-6">
-                  {exp.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
-                      <ChevronRight className={`w-4 h-4 ${exp.bulletColor} flex-shrink-0 mt-0.5`} />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+                  {/* Details list */}
+                  <ul className="flex flex-col gap-2 mb-3.5 font-mono">
+                    {exp.details.map((detail, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-xs text-gray-300 leading-relaxed font-medium">
+                        <ChevronRight className={`w-3.5 h-3.5 ${exp.bulletColor} flex-shrink-0 mt-0.5`} />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                {/* Skill badges with neon shadows */}
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/[0.04]">
-                  {exp.skills.map((skill) => (
-                    <span 
-                      key={skill} 
-                      className={`px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-white/[0.02] border transition-all duration-300 ${exp.badgeBorder}`}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Actions Section */}
-                {exp.actions && (
-                  <div className="relative z-10 flex flex-col sm:flex-row flex-wrap items-center gap-4 mt-6 border-t border-white/[0.05] pt-6">
-                    {exp.actions.map((act, actIdx) => {
-                      const ActIcon = act.icon;
-                      if (act.type === "gradient" && act.url) {
-                        return (
-                          <motion.a
-                            key={actIdx}
-                            href={act.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            whileHover={{ scale: 1.02, y: -2 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-500 hover:via-indigo-500 hover:to-blue-500 border border-purple-500/30 text-white text-sm font-semibold shadow-[0_0_20px_rgba(139,92,246,0.25)] hover:shadow-[0_0_30px_rgba(139,92,246,0.45)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-                          >
-                            <ActIcon className="w-4 h-4" />
-                            <span>{act.text}</span>
-                          </motion.a>
-                        );
-                      }
-                      
-                      if (act.type === "glass" && act.url) {
-                        return (
-                          <motion.a
-                            key={actIdx}
-                            href={act.url}
-                            download={act.isDownload}
-                            target={act.isDownload ? undefined : "_blank"}
-                            rel={act.isDownload ? undefined : "noopener noreferrer"}
-                            whileHover={{ scale: 1.02, y: -2 }}
-                            whileTap={{ scale: 0.98 }}
-                            className="w-full sm:w-auto h-[52px] px-6 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-white/[0.15] text-slate-200 hover:text-white text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_15px_rgba(255,255,255,0.02)] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]"
-                          >
-                            <ActIcon className="w-4 h-4" />
-                            <span>{act.text}</span>
-                          </motion.a>
-                        );
-                      }
-                      
-                      if (act.type === "disabled") {
-                        return (
-                          <div key={actIdx} className="relative group/tooltip w-full sm:w-auto">
-                            <button
-                              disabled
-                              className="w-full sm:w-auto h-[52px] px-5 rounded-2xl bg-white/[0.01] border border-white/[0.04] text-slate-500 text-sm font-semibold flex items-center justify-center gap-2 cursor-not-allowed"
-                            >
-                              <ActIcon className="w-4 h-4 text-slate-600" />
-                              <span>{act.text}</span>
-                              {act.badge && (
-                                <span className="text-[9px] bg-slate-500/10 px-1.5 py-0.5 rounded border border-slate-500/20 text-slate-400 font-bold uppercase tracking-wider">
-                                  {act.badge}
-                                </span>
-                              )}
-                            </button>
-                            
-                            {act.tooltip && (
-                              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2.5 rounded-xl bg-black/90 border border-white/10 text-white text-[10px] text-center leading-normal opacity-0 pointer-events-none group-hover/tooltip:opacity-100 transition-opacity duration-200 z-30 shadow-xl pointer-events-none">
-                                {act.tooltip}
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-black/90" />
-                              </div>
-                            )}
-                          </div>
-                        );
-                      }
-                      return null;
-                    })}
+                  {/* Skill badges */}
+                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.08]">
+                    {exp.skills.map((skill) => (
+                      <span 
+                        key={skill} 
+                        className={`px-2 py-0.5 rounded-md text-[10px] font-mono font-medium transition-all duration-300 ${exp.badgeBorder}`}
+                      >
+                        #{skill}
+                      </span>
+                    ))}
                   </div>
-                )}
+
+                  {/* Actions Section */}
+                  {exp.actions && (
+                    <div className="relative z-10 flex flex-col sm:flex-row flex-wrap items-center gap-2.5 mt-3.5 border-t border-white/[0.08] pt-3.5 font-mono">
+                      {exp.actions.map((act, actIdx) => {
+                        const ActIcon = act.icon;
+                        if (act.type === "gradient" && act.url) {
+                          return (
+                            <motion.a
+                              key={actIdx}
+                              href={act.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onMouseEnter={() => sounds.playHover()}
+                              onClick={() => sounds.playClick()}
+                              whileHover={{ scale: 1.02, y: -1 }}
+                              whileTap={{ scale: 0.98 }}
+                              className="w-full sm:w-auto h-[40px] px-4 rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white text-xs font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_rgba(255,0,127,0.5)] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                            >
+                              <ActIcon className="w-3.5 h-3.5" />
+                              <span>{act.text}</span>
+                            </motion.a>
+                          );
+                        }
+                        
+                        if (act.type === "glass" && act.url) {
+                          return (
+                            <motion.a
+                              key={actIdx}
+                              href={act.url}
+                              download={act.isDownload}
+                              target={act.isDownload ? undefined : "_blank"}
+                              rel={act.isDownload ? undefined : "noopener noreferrer"}
+                              onMouseEnter={() => sounds.playHover()}
+                              onClick={() => sounds.playSuccess()}
+                              whileHover={{ scale: 1.02, y: -1 }}
+                              whileTap={{ scale: 0.98 }}
+                              className="w-full sm:w-auto h-[40px] px-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-gray-200 hover:text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                            >
+                              <ActIcon className="w-3.5 h-3.5" />
+                              <span>{act.text}</span>
+                            </motion.a>
+                          );
+                        }
+                        
+                        return null;
+                      })}
+                    </div>
+                  )}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          );
-        })}
-      </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
     </section>
   );
 }

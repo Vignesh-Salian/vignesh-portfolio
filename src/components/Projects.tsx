@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Sparkles } from "lucide-react";
+import { sounds } from "@/lib/soundFx";
 
 // Github SVG Icon
 const GithubIcon = () => (
@@ -22,7 +23,8 @@ const projects = [
     githubUrl: "https://github.com/Vignesh-Salian/VidSnapAI",
     badgeText: "Featured",
     badgeIcon: "/featured_badge_icon_v1.png",
-    badgeColor: "bg-purple-500/10 border-purple-500/20 text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.15)]",
+    badgeColor: "bg-[#8a2be2]/15 border-[#8a2be2]/30 text-[#c084fc] shadow-[0_0_12px_rgba(138,43,226,0.2)]",
+    borderAccent: "hover:border-[#8a2be2]/50",
   },
   {
     id: 2,
@@ -34,7 +36,8 @@ const projects = [
     githubUrl: "https://github.com/Vignesh-Salian/ml-benchmark-fraud-detection",
     badgeText: "Machine Learning",
     badgeIcon: "/ml_badge_icon_v1.png",
-    badgeColor: "bg-blue-500/10 border-blue-500/20 text-blue-300 shadow-[0_0_15px_rgba(59,130,246,0.15)]",
+    badgeColor: "bg-[#00ffa3]/15 border-[#00ffa3]/30 text-[#00ffa3] shadow-[0_0_12px_rgba(0,255,163,0.2)]",
+    borderAccent: "hover:border-[#00ffa3]/50",
   },
   {
     id: 3,
@@ -46,7 +49,8 @@ const projects = [
     githubUrl: "https://github.com/Vignesh-Salian/Aruco-Distance-Measurement",
     badgeText: "IEEE ICCES 2025",
     badgeIcon: "/ieee_badge_icon_v1.png",
-    badgeColor: "bg-emerald-500/10 border-emerald-500/20 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.15)]",
+    badgeColor: "bg-[#00f0ff]/15 border-[#00f0ff]/30 text-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.2)]",
+    borderAccent: "hover:border-[#00f0ff]/50",
   },
 ];
 
@@ -55,141 +59,162 @@ export default function Projects() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15 },
+      transition: { staggerChildren: 0.1 },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 16 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
+      transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const },
     },
   };
 
   return (
-    <section id="projects" className="py-20 border-t border-white/5 relative">
-      <div className="absolute bottom-0 right-0 w-[40%] h-[30%] bg-purple-500/5 blur-[150px] pointer-events-none" />
+    <section id="projects" className="py-8 sm:py-10 border-t border-[#00f0ff]/20 relative">
+      {/* Ambient background light */}
+      <div className="absolute top-1/3 left-10 w-80 h-80 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#8a2be2]/12 blur-[150px] pointer-events-none rounded-full" />
 
-      {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-purple-400 animate-pulse" />
-            <span className="text-xs font-bold text-purple-400 uppercase tracking-widest">Portfolio</span>
-          </div>
-          <h2 className="font-space font-bold text-3xl sm:text-4xl text-white tracking-tight">
-            ✦ Featured Projects
-          </h2>
-          <p className="text-sm sm:text-base text-gray-400 max-w-[600px] leading-relaxed">
-            Research-driven AI systems and full-stack applications built to solve real-world problems.
-          </p>
-        </div>
-        <a 
-          href="https://github.com/Vignesh-Salian" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-xs font-bold text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1.5 group/link self-start md:self-auto px-4 py-2 rounded-xl bg-purple-500/5 border border-purple-500/10 hover:bg-purple-500/10 hover:border-purple-500/20"
-        >
-          <span>View All Projects</span>
-          <span className="transition-transform group-hover/link:translate-x-1">→</span>
-        </a>
-      </div>
-
-      {/* Projects Grid */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        {projects.map((proj) => (
-          <motion.div
-            key={proj.id}
-            variants={cardVariants}
-            whileHover={{ y: -8 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="group relative flex flex-col h-full rounded-[32px] transition-all duration-300"
-          >
-            {/* Soft blue-purple glow behind on hover */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/10 to-purple-500/15 rounded-[32px] blur-lg opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
-
-            {/* Container to clip children and apply glass-panel styles */}
-            <div className="relative h-full flex flex-col rounded-[32px] overflow-hidden bg-[#0a0a10]/60 backdrop-blur-xl border border-white/5 hover:border-purple-500/20 transition-all duration-300 flex-grow z-10">
-              {/* Project Image Panel */}
-              <div className="relative w-full h-[180px] overflow-hidden bg-black/40 border-b border-white/5">
-                <Image
-                  src={proj.image}
-                  alt={proj.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a10]/80 via-transparent to-transparent" />
-                
-                {/* Badge Overlay */}
-                {proj.badgeText && (
-                  <div className={`absolute top-4 left-4 z-10 flex items-center gap-1.5 px-3 py-1 rounded-full border text-[10px] font-semibold backdrop-blur-md ${proj.badgeColor}`}>
-                    {proj.badgeIcon && (
-                      <Image 
-                        src={proj.badgeIcon} 
-                        alt="" 
-                        width={14} 
-                        height={14} 
-                        className="object-contain select-none" 
-                      />
-                    )}
-                    <span>{proj.badgeText}</span>
-                  </div>
-                )}
-              </div>
-
-              {/* Content Details */}
-              <div className="p-6 flex flex-col flex-grow justify-between gap-5">
-                <div>
-                  <h3 className="font-space font-bold text-base sm:text-lg text-white mb-2 group-hover:text-purple-400 transition-colors flex items-center gap-2">
-                    <Image src={proj.icon} alt={`${proj.title} Icon`} width={24} height={24} className="rounded-md object-contain" />
-                    {proj.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-400 font-medium leading-relaxed">
-                    {proj.description}
-                  </p>
-                </div>
-
-                <div>
-                  {/* Tech tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {proj.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-[10px] sm:text-xs font-semibold shadow-[inset_0_0_10px_rgba(168,85,247,0.15)] hover:bg-purple-500/20 hover:border-purple-500/40 hover:text-white transition-all duration-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] hover:-translate-y-0.5"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Card Action Button - Premium Cybernetic GitHub Button */}
-                  <div className="border-t border-white/5 pt-5 mt-auto">
-                    <a
-                      href={proj.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/btn relative w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 hover:from-purple-500/20 hover:to-blue-500/20 border border-purple-500/20 hover:border-purple-500/50 text-xs sm:text-sm font-bold text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] overflow-hidden"
-                    >
-                      <div className="absolute inset-0 translate-x-[-100%] group-hover/btn:translate-x-[100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 ease-in-out pointer-events-none" />
-                      <GithubIcon />
-                      <span>View Repository</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+          <div className="space-y-1.5">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[10px] font-mono font-bold text-[#00f0ff]">
+              <Sparkles className="w-3 h-3" />
+              <span>PORTFOLIO // DIGITAL_LIBRARY</span>
             </div>
-          </motion.div>
-        ))}
-      </motion.div>
+            <h2 className="font-mono font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+              ✦ Featured Projects
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-400 max-w-[600px] leading-relaxed font-mono">
+              Research-driven AI systems and full-stack applications built to solve real-world problems.
+            </p>
+          </div>
+          
+          <a 
+            href="https://github.com/Vignesh-Salian" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onMouseEnter={() => sounds.playHover()}
+            onClick={() => sounds.playClick()}
+            className="text-xs font-mono font-bold text-[#00f0ff] hover:text-white transition-all flex items-center gap-1.5 self-start md:self-auto px-3.5 py-2 rounded-xl bg-[#070c18] border border-[#00f0ff]/30 hover:border-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.15)] group/link"
+          >
+            <span>View All Projects</span>
+            <span className="transition-transform group-hover/link:translate-x-1">→</span>
+          </a>
+        </div>
+
+        {/* Projects Grid: 3-column compact responsive cards */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          {projects.map((proj) => (
+            <motion.div
+              key={proj.id}
+              variants={cardVariants}
+              whileHover={{ y: -4, scale: 1.01 }}
+              transition={{ duration: 0.2 }}
+              className="group relative flex flex-col h-full rounded-2xl transition-all duration-300"
+            >
+              {/* Cyber card container */}
+              <div className={`relative h-full flex flex-col rounded-2xl overflow-hidden bg-[#070c18]/95 backdrop-blur-2xl border border-white/[0.08] ${proj.borderAccent} transition-all duration-300 flex-grow z-10 shadow-[0_0_25px_rgba(0,0,0,0.6)] hover:shadow-[0_0_25px_rgba(0,240,255,0.2)]`}>
+                
+                {/* Cyber Corner Notches */}
+                <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-[#00f0ff] opacity-30 group-hover:opacity-100 transition-opacity z-20 pointer-events-none" />
+                <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-[#ff007f] opacity-30 group-hover:opacity-100 transition-opacity z-20 pointer-events-none" />
+
+                {/* Project Image Panel */}
+                <div className="relative w-full h-[155px] sm:h-[165px] overflow-hidden bg-black/60 border-b border-white/[0.08]">
+                  <Image
+                    src={proj.image}
+                    alt={proj.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#070c18] via-transparent to-transparent opacity-80" />
+                  
+                  {/* Badge Overlay */}
+                  {proj.badgeText && (
+                    <div className={`absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] font-mono font-bold backdrop-blur-md ${proj.badgeColor}`}>
+                      {proj.badgeIcon && (
+                        <Image 
+                          src={proj.badgeIcon} 
+                          alt="" 
+                          width={12} 
+                          height={12} 
+                          className="object-contain select-none" 
+                        />
+                      )}
+                      <span>{proj.badgeText}</span>
+                    </div>
+                  )}
+                </div>
+
+                {/* Content Details */}
+                <div className="p-4 sm:p-5 flex flex-col flex-grow justify-between gap-4">
+                  <div>
+                    <h3 className="font-mono font-bold text-sm sm:text-base text-white mb-1.5 group-hover:text-[#00f0ff] transition-colors flex items-center gap-2">
+                      <Image src={proj.icon} alt={`${proj.title} Icon`} width={20} height={20} className="rounded-md object-contain" />
+                      <span>{proj.title}</span>
+                    </h3>
+                    <p className="text-xs text-gray-300 font-mono leading-relaxed">
+                      {proj.description}
+                    </p>
+                  </div>
+
+                  <div>
+                    {/* Tech tags */}
+                    <div className="flex flex-wrap gap-1.5 mb-3.5">
+                      {proj.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-0.5 rounded-md bg-black/40 border border-white/[0.08] text-gray-300 text-[10px] font-mono hover:text-[#00f0ff] hover:border-[#00f0ff]/30 transition-colors"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Gaming Action Button */}
+                    <div className="border-t border-white/[0.08] pt-3 mt-auto">
+                      <motion.a
+                        href={proj.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onMouseEnter={() => sounds.playHover()}
+                        onClick={() => sounds.playClick()}
+                        whileHover={{ scale: 1.02, y: -1 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="group/btn relative w-full h-[40px] flex items-center justify-center gap-2 px-4 rounded-xl bg-gradient-to-r from-[#00f0ff]/15 via-[#8a2be2]/20 to-[#ff007f]/15 border border-[#00f0ff]/40 hover:border-[#00f0ff] hover:bg-gradient-to-r hover:from-[#00f0ff]/25 hover:via-[#8a2be2]/30 hover:to-[#ff007f]/25 text-xs font-mono font-bold text-white transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.15)] hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] overflow-hidden cursor-pointer"
+                      >
+                        {/* Gaming Button Corner Brackets */}
+                        <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#00f0ff] opacity-60 group-hover/btn:opacity-100 transition-opacity" />
+                        <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#ff007f] opacity-60 group-hover/btn:opacity-100 transition-opacity" />
+
+                        {/* Animated Light Shimmer */}
+                        <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/15 to-transparent pointer-events-none" />
+
+                        <GithubIcon />
+                        <span className="tracking-wide">VIEW REPOSITORY</span>
+                        <ExternalLink className="w-3.5 h-3.5 text-[#00f0ff] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                      </motion.a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }

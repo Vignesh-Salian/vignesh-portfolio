@@ -55,13 +55,7 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
-      <body className="bg-[#050816] text-gray-100 font-sans antialiased overflow-x-hidden min-h-screen relative">
-        {/* Background glow ambient elements */}
-        <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-purple-950/20 blur-[120px] animate-pulse-slow" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-blue-950/15 blur-[150px] animate-pulse-slow" style={{ animationDelay: '3s' }} />
-          <div className="absolute top-[40%] left-[30%] w-[35vw] h-[35vw] rounded-full bg-cyan-950/10 blur-[130px] animate-pulse-slow" style={{ animationDelay: '6s' }} />
-        </div>
+      <body className="bg-[#030712] text-gray-100 font-sans antialiased overflow-x-hidden min-h-screen relative">
         
         {/* Main Content Wrapper */}
         <div className="relative z-10 w-full min-h-screen">

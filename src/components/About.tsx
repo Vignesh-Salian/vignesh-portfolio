@@ -298,7 +298,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="mt-16 sm:mt-20 w-full max-w-4xl mx-auto"
+          className="mt-8 sm:mt-10 w-full max-w-4xl mx-auto"
         >
           <div className="flex items-center gap-2 mb-4 justify-center">
             <Briefcase className="w-4 h-4 text-[#c084fc]" />

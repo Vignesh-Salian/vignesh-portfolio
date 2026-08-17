@@ -188,50 +188,50 @@ export default function Sidebar() {
       </AnimatePresence>
 
       {/* Desktop HUD Commander Sidebar */}
-      <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-80 flex-col z-30 bg-[#050814]/95 backdrop-blur-3xl border-r border-[#00f0ff]/20 p-5 overflow-y-auto overflow-x-hidden shadow-[0_0_40px_rgba(0,0,0,0.85)]">
+      <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-80 xl:w-[340px] 2xl:w-[360px] flex-col justify-between z-30 bg-[#050814]/95 backdrop-blur-3xl border-r border-[#00f0ff]/20 p-4 xl:p-5 overflow-y-auto overflow-x-hidden shadow-[0_0_40px_rgba(0,0,0,0.85)]">
         
         {/* Ambient Top Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-32 bg-[#00f0ff]/10 blur-3xl pointer-events-none rounded-full" />
 
         {/* Profile Card Section */}
-        <div className="flex flex-col items-center text-center mt-2 relative z-10">
+        <div className="flex flex-col items-center text-center mt-1 xl:mt-2 relative z-10">
           {/* Avatar Container with Cyber Corner Accents */}
-          <div className="relative group">
+          <div className="relative group shrink-0">
             {/* Cyber Corner Notches */}
             <div className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-[#00f0ff] opacity-75 group-hover:opacity-100 transition-opacity" />
             <div className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-2 border-r-2 border-[#ff007f] opacity-75 group-hover:opacity-100 transition-opacity" />
 
             {/* Large Prominent Authentic Portrait */}
-            <div className="relative w-36 h-36 sm:w-38 sm:h-38 rounded-3xl p-[2px] bg-gradient-to-br from-[#00f0ff] via-[#8a2be2] to-[#ff007f] shadow-[0_0_30px_rgba(0,240,255,0.45)]">
+            <div className="relative w-38 h-38 xl:w-44 xl:h-44 rounded-3xl p-[2px] bg-gradient-to-br from-[#00f0ff] via-[#8a2be2] to-[#ff007f] shadow-[0_0_30px_rgba(0,240,255,0.45)] shrink-0">
               <div className="w-full h-full rounded-[22px] overflow-hidden relative bg-[#070c18]">
                 <Image 
                   src="/profile_original.png" 
                   alt="Vignesh N Salian" 
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="152px"
+                  sizes="(max-width: 1280px) 152px, 176px"
                   priority
                 />
               </div>
             </div>
           </div>
           
-          <h2 className="mt-4 font-mono font-extrabold text-lg text-white tracking-wide">
+          <h2 className="mt-2.5 xl:mt-3 font-mono font-extrabold text-base xl:text-lg text-white tracking-wide">
             Vignesh N Salian
           </h2>
-          <p className="text-xs text-gray-400 font-mono font-medium mt-1">
+          <p className="text-[11px] xl:text-xs text-gray-400 font-mono font-medium mt-0.5">
             AI Engineer • Full Stack Developer
           </p>
           
           {/* Status Badge */}
-          <div className="mt-3 flex items-center gap-1.5 bg-[#00ffa3]/10 border border-[#00ffa3]/30 px-3.5 py-1 rounded-full relative shadow-[0_0_15px_rgba(0,255,163,0.15)]">
+          <div className="mt-2 xl:mt-2.5 flex items-center gap-1.5 bg-[#00ffa3]/10 border border-[#00ffa3]/30 px-3 py-0.5 rounded-full relative shadow-[0_0_15px_rgba(0,255,163,0.15)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00ffa3] animate-pulse" />
-            <span className="text-[10px] text-[#00ffa3] font-mono font-bold tracking-wider uppercase">Available for work</span>
+            <span className="text-[9px] xl:text-[10px] text-[#00ffa3] font-mono font-bold tracking-wider uppercase">Available for work</span>
           </div>
         </div>
 
         {/* HUD Navigation Section — Cyberpunk Gaming Mission Cards */}
-        <nav className="flex flex-col gap-2 mt-6 relative z-10">
+        <nav className="flex flex-col gap-1.5 xl:gap-2 mt-3 xl:mt-5 relative z-10">
           <div className="text-[9px] font-mono font-bold text-gray-500 uppercase tracking-widest px-2 mb-0.5 flex items-center justify-between">
             <span>TACTICAL_NAV</span>
             <span className="text-[#00f0ff]/60">v2.6.4</span>
@@ -245,7 +245,7 @@ export default function Sidebar() {
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
                 onMouseEnter={() => sounds.playHover()}
-                className={`relative group flex items-center justify-between px-3 py-2 rounded-xl text-xs font-mono font-semibold transition-all text-left cursor-pointer overflow-hidden border ${
+                className={`relative group flex items-center justify-between px-3 py-1.5 xl:py-2 rounded-xl text-xs font-mono font-semibold transition-all text-left cursor-pointer overflow-hidden border ${
                   isActive 
                     ? "text-white font-bold border-[#00f0ff]/60 bg-gradient-to-r from-[#00f0ff]/20 via-[#8a2be2]/15 to-[#070c18] shadow-[0_0_20px_rgba(0,240,255,0.3)]" 
                     : "text-gray-300 bg-[#070c18]/80 hover:bg-[#0c1322] border-white/[0.08] hover:border-[#00f0ff]/40 hover:text-white shadow-[0_0_10px_rgba(0,0,0,0.3)]"
@@ -263,7 +263,7 @@ export default function Sidebar() {
 
                 <div className="flex items-center gap-2.5 z-10 pl-0.5">
                   {/* Glowing Gaming Icon Tile */}
-                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 ${
+                  <div className={`w-6 h-6 xl:w-7 xl:h-7 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 ${
                     isActive 
                       ? "bg-[#00f0ff]/20 border-[#00f0ff]/60 text-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.5)] scale-105" 
                       : "bg-black/60 border-white/10 text-gray-400 group-hover:border-[#00f0ff]/50 group-hover:text-[#00f0ff] group-hover:shadow-[0_0_10px_rgba(0,240,255,0.3)] group-hover:scale-105"
@@ -290,7 +290,7 @@ export default function Sidebar() {
         </nav>
 
         {/* Gaming Action Section: Cyberpunk Gaming "Hire Me" Button & Socials */}
-        <div className="mt-6 flex flex-col gap-3 z-10">
+        <div className="mt-3 xl:mt-5 flex flex-col gap-2.5 z-10">
           {/* Cyberpunk Gaming "Hire Me" Button */}
           <motion.button 
             onClick={handleHireMeClick}
@@ -305,13 +305,13 @@ export default function Sidebar() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] opacity-85 group-hover:opacity-100 transition-opacity" />
 
             {/* Inner Gaming Button Body */}
-            <div className="relative w-full h-[44px] px-4 rounded-[10px] bg-[#070c18] flex items-center justify-between transition-all group-hover:bg-[#070c18]/80">
+            <div className="relative w-full h-[40px] xl:h-[44px] px-4 rounded-[10px] bg-[#070c18] flex items-center justify-between transition-all group-hover:bg-[#070c18]/80">
               {/* Top-left & Bottom-right Cyber Notches */}
               <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none" />
               <div className="absolute bottom-0 right-0 w-2.5 h-2.5 border-b-2 border-r-2 border-[#ff007f] pointer-events-none" />
 
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-lg bg-[#00f0ff]/15 border border-[#00f0ff]/30 flex items-center justify-center text-[#00f0ff] shadow-[0_0_10px_rgba(0,240,255,0.4)] group-hover:scale-110 transition-transform">
+                <div className="w-5 h-5 xl:w-6 xl:h-6 rounded-lg bg-[#00f0ff]/15 border border-[#00f0ff]/30 flex items-center justify-center text-[#00f0ff] shadow-[0_0_10px_rgba(0,240,255,0.4)] group-hover:scale-110 transition-transform">
                   <Sparkles className="w-3.5 h-3.5" />
                 </div>
                 <span className="font-mono font-extrabold text-xs text-white tracking-wider group-hover:text-[#00f0ff] transition-colors">
@@ -333,7 +333,7 @@ export default function Sidebar() {
               rel="noopener noreferrer" 
               onMouseEnter={() => sounds.playHover()}
               onClick={() => sounds.playClick()}
-              className="flex-1 py-2.5 rounded-xl bg-[#0d1117]/80 border border-white/20 hover:border-white hover:bg-[#161b22] text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.35)] flex items-center justify-center transition-all shadow-sm cursor-pointer hover:scale-105" 
+              className="flex-1 py-2 xl:py-2.5 rounded-xl bg-[#0d1117]/80 border border-white/20 hover:border-white hover:bg-[#161b22] text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.35)] flex items-center justify-center transition-all shadow-sm cursor-pointer hover:scale-105" 
               aria-label="GitHub"
             >
               <GithubIcon className="w-4 h-4" />
@@ -344,7 +344,7 @@ export default function Sidebar() {
               rel="noopener noreferrer" 
               onMouseEnter={() => sounds.playHover()}
               onClick={() => sounds.playClick()}
-              className="flex-1 py-2.5 rounded-xl bg-[#0077b5]/10 border border-[#0077b5]/30 hover:border-[#0a66c2] hover:bg-[#0077b5]/25 text-[#0a66c2] hover:text-[#38bdf8] hover:shadow-[0_0_18px_rgba(10,102,194,0.5)] flex items-center justify-center transition-all shadow-sm cursor-pointer hover:scale-105" 
+              className="flex-1 py-2 xl:py-2.5 rounded-xl bg-[#0077b5]/10 border border-[#0077b5]/30 hover:border-[#0a66c2] hover:bg-[#0077b5]/25 text-[#0a66c2] hover:text-[#38bdf8] hover:shadow-[0_0_18px_rgba(10,102,194,0.5)] flex items-center justify-center transition-all shadow-sm cursor-pointer hover:scale-105" 
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="w-4 h-4" />
@@ -353,7 +353,7 @@ export default function Sidebar() {
               href="mailto:salianvignesh05@gmail.com" 
               onMouseEnter={() => sounds.playHover()}
               onClick={() => sounds.playClick()}
-              className="flex-1 py-2.5 rounded-xl bg-[#ea4335]/10 border border-[#ea4335]/30 hover:border-[#ea4335] hover:bg-[#ea4335]/25 text-[#ea4335] hover:text-[#ff6b6b] hover:shadow-[0_0_18px_rgba(234,67,53,0.5)] flex items-center justify-center transition-all shadow-sm cursor-pointer hover:scale-105" 
+              className="flex-1 py-2 xl:py-2.5 rounded-xl bg-[#ea4335]/10 border border-[#ea4335]/30 hover:border-[#ea4335] hover:bg-[#ea4335]/25 text-[#ea4335] hover:text-[#ff6b6b] hover:shadow-[0_0_18px_rgba(234,67,53,0.5)] flex items-center justify-center transition-all shadow-sm cursor-pointer hover:scale-105" 
               aria-label="Email"
             >
               <Mail className="w-4 h-4" />
@@ -362,7 +362,7 @@ export default function Sidebar() {
         </div>
 
         {/* Minimal Footer */}
-        <div className="mt-6 pt-2 text-center text-[10px] text-gray-500 font-mono leading-tight z-10 pb-4">
+        <div className="mt-2 xl:mt-3 pt-1 text-center text-[10px] text-gray-500 font-mono leading-tight z-10 pb-1">
           <span>© 2026 Vignesh N Salian</span>
         </div>
       </aside>

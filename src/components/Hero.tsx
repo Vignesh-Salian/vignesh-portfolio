@@ -52,13 +52,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex items-center justify-center pt-1 sm:pt-2 pb-2 sm:pb-4 relative overflow-hidden"
+      className="min-h-[calc(100dvh-2.5rem)] flex items-center justify-center pt-2 sm:pt-4 pb-4 sm:pb-6 relative overflow-hidden"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[450px] bg-[#00f0ff]/10 blur-[160px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-1/4 w-[500px] h-[400px] bg-[#8a2be2]/12 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center w-full relative z-10">
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             LEFT COLUMN — 7 of 12 cols

@@ -105,7 +105,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8 border-t border-[#00f0ff]/20 relative overflow-hidden">
+    <section id="contact" className="py-8 sm:py-10 border-t border-[#00f0ff]/20 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-10 w-80 h-80 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#ff007f]/10 blur-[150px] pointer-events-none rounded-full" />

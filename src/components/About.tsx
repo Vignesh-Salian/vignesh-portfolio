@@ -45,8 +45,8 @@ export default function About() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Viewport 1: Main About Dossier Block (Full viewport fit on desktop) */}
-        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
+        {/* Viewport 1: Main About Dossier Block */}
+        <div className="py-4 sm:py-6">
           {/* Section Header: Compact Gaming HUD Header */}
           <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
             <div className="w-8 h-8 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 flex items-center justify-center shadow-[0_0_12px_rgba(138,43,226,0.3)]">
@@ -296,7 +296,7 @@ export default function About() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             VIEWPORT 2: PROFESSIONAL RECOGNITION (GOPERCH)
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center pt-2 sm:pt-4 lg:pt-2 pb-6 lg:pb-8">
+        <div className="pt-6 sm:pt-8 pb-4">
           <motion.div
             variants={itemVariants}
             initial="hidden"

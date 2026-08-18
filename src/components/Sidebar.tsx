@@ -47,6 +47,26 @@ export const navItems = [
 export default function Sidebar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
+  const [isFullscreenPhoto, setIsFullscreenPhoto] = useState(false);
+
+  // Prevent background scroll when fullscreen photo is open
+  useEffect(() => {
+    if (isFullscreenPhoto) {
+      document.body.style.overflow = "hidden";
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+          setIsFullscreenPhoto(false);
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.body.style.overflow = "unset";
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isFullscreenPhoto]);
 
   // Scroll spy to highlight active section
   useEffect(() => {
@@ -90,12 +110,22 @@ export default function Sidebar() {
     }
   };
 
+  const openFullscreenPhoto = () => {
+    sounds.playClick();
+    setIsFullscreenPhoto(true);
+  };
+
   return (
     <>
       {/* Mobile Top HUD Bar */}
       <header className="lg:hidden fixed top-0 left-0 w-full z-50 px-4 py-3 bg-[#050814]/90 backdrop-blur-2xl border-b border-[#00f0ff]/25 flex items-center justify-between shadow-[0_0_25px_rgba(0,240,255,0.15)]">
         <div className="flex items-center gap-3">
-          <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-[#00f0ff]/40 shadow-[0_0_12px_rgba(0,240,255,0.4)]">
+          <button
+            type="button"
+            onClick={openFullscreenPhoto}
+            aria-label="Open profile picture"
+            className="relative w-10 h-10 rounded-xl overflow-hidden border border-[#00f0ff]/40 shadow-[0_0_12px_rgba(0,240,255,0.4)] cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00f0ff]"
+          >
             <Image 
               src="/profile_original.png" 
               alt="Vignesh N Salian" 
@@ -104,7 +134,7 @@ export default function Sidebar() {
               sizes="40px"
               priority
             />
-          </div>
+          </button>
           <div>
             <span className="font-mono font-bold text-sm tracking-wide text-white flex items-center gap-1.5">
               <span>Vignesh N Salian</span>
@@ -187,6 +217,74 @@ export default function Sidebar() {
         )}
       </AnimatePresence>
 
+      {/* Cinematic 3D Flip Fullscreen Profile Picture Modal */}
+      <AnimatePresence>
+        {isFullscreenPhoto && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-xl p-4 sm:p-6 select-none"
+            onClick={() => setIsFullscreenPhoto(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Profile Picture View"
+          >
+            {/* Cinematic Background Light Glows */}
+            <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-[#00f0ff]/15 blur-[160px] pointer-events-none rounded-full" />
+            <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-[#8a2be2]/20 blur-[160px] pointer-events-none rounded-full" />
+
+            {/* 3D Flipping Card Container */}
+            <motion.div
+              initial={{ rotateY: 180, scale: 0.75, opacity: 0 }}
+              animate={{ rotateY: 0, scale: 1, opacity: 1 }}
+              exit={{ rotateY: -180, scale: 0.75, opacity: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              style={{ transformStyle: "preserve-3d", perspective: 1400 }}
+              className="relative max-w-[90vw] max-h-[85vh] sm:max-w-[500px] sm:max-h-[500px] xl:max-w-[540px] xl:max-h-[540px] w-full aspect-square flex flex-col items-center justify-center cursor-pointer"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsFullscreenPhoto(false);
+              }}
+            >
+              {/* Subtle Floating Animation Wrapper */}
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="relative w-full h-full p-[3px] rounded-3xl bg-gradient-to-br from-[#00f0ff] via-[#8a2be2] to-[#ff007f] shadow-[0_0_60px_rgba(0,240,255,0.45),0_0_100px_rgba(138,43,226,0.3)]"
+              >
+                {/* Cyber Corner HUD Brackets */}
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none z-20" />
+                <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-[#00ffa3] pointer-events-none z-20" />
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-[#8a2be2] pointer-events-none z-20" />
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-[#ff007f] pointer-events-none z-20" />
+
+                {/* Inner Image Container */}
+                <div className="w-full h-full rounded-[22px] overflow-hidden relative bg-[#070c18]">
+                  <Image 
+                    src="/profile_original.png" 
+                    alt="Vignesh N Salian" 
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 90vw, 540px"
+                    priority
+                  />
+                  {/* Subtle Neon Scanline Glow Vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                </div>
+
+                {/* HUD Overlay Label */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-[#070c18]/90 border border-[#00f0ff]/40 text-[#00f0ff] font-mono text-xs font-bold shadow-[0_0_20px_rgba(0,240,255,0.3)] backdrop-blur-md whitespace-nowrap pointer-events-none flex items-center gap-2">
+                  <Sparkles className="w-3.5 h-3.5 text-[#00ffa3] animate-pulse" />
+                  <span>Vignesh N Salian // ARCHITECT</span>
+                </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Desktop HUD Commander Sidebar */}
       <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-72 xl:w-80 2xl:w-[340px] flex-col justify-between z-30 bg-[#050814]/95 backdrop-blur-3xl border-r border-[#00f0ff]/20 p-3 xl:p-4 overflow-y-auto overflow-x-hidden shadow-[0_0_40px_rgba(0,0,0,0.85)]">
         
@@ -195,10 +293,19 @@ export default function Sidebar() {
 
         {/* Profile Card Section */}
         <div className="flex flex-col items-center text-center mt-0 relative z-10">
-          {/* Avatar Container with Cyber Corner Accents & Interactive Zoom */}
-          <div 
-            className="relative group shrink-0 cursor-pointer"
+          {/* Avatar Container with Cyber Corner Accents, Keyboard Access & Interactive 3D Zoom */}
+          <button
+            type="button"
+            onClick={openFullscreenPhoto}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openFullscreenPhoto();
+              }
+            }}
             onMouseEnter={() => sounds.playHover()}
+            aria-label="Open profile picture"
+            className="relative group shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#00f0ff] rounded-2xl"
           >
             {/* Cyber Corner Notches */}
             <div className="absolute -top-1.5 -left-1.5 w-3.5 h-3.5 border-t-2 border-l-2 border-[#00f0ff] opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300" />
@@ -217,7 +324,7 @@ export default function Sidebar() {
                 />
               </div>
             </div>
-          </div>
+          </button>
           
           <h2 className="mt-1.5 font-mono font-extrabold text-sm xl:text-base text-white tracking-wide">
             Vignesh N Salian

@@ -38,7 +38,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-4 sm:py-6 border-t border-[#00f0ff]/20 relative">
+    <section id="about" className="relative border-t border-[#00f0ff]/20">
       {/* Background Ambient Lighting */}
       <div className="absolute top-1/3 right-10 w-96 h-96 bg-[#8a2be2]/12 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
@@ -46,17 +46,17 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Viewport 1: Main About Dossier Block (Full viewport fit on desktop) */}
-        <div className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-2 lg:py-4">
+        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
           {/* Section Header: Compact Gaming HUD Header */}
-          <div className="flex items-center gap-2.5 mb-3.5 sm:mb-4">
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 flex items-center justify-center shadow-[0_0_12px_rgba(138,43,226,0.3)]">
-              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#c084fc] animate-pulse" />
+          <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
+            <div className="w-8 h-8 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 flex items-center justify-center shadow-[0_0_12px_rgba(138,43,226,0.3)]">
+              <Sparkles className="w-4 h-4 text-[#c084fc] animate-pulse" />
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight font-mono">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-mono">
                 About Me
               </h2>
-              <span className="text-[9px] sm:text-[10px] font-mono text-[#00f0ff] tracking-wider uppercase block -mt-0.5">
+              <span className="text-[10px] font-mono text-[#00f0ff] tracking-wider uppercase block -mt-0.5">
                 PLAYER_PROFILE // ARCHITECT_DOSSIER
               </span>
             </div>
@@ -75,7 +75,7 @@ export default function About() {
               variants={itemVariants}
               className="lg:col-span-7 flex flex-col"
             >
-              <div className="relative p-4 sm:p-5 lg:p-5.5 rounded-2xl bg-[#070c18]/95 border border-[#00f0ff]/30 shadow-[0_0_30px_rgba(0,240,255,0.12)] backdrop-blur-2xl h-full flex flex-col justify-between overflow-hidden group">
+              <div className="relative p-5 sm:p-6 lg:p-6.5 rounded-2xl bg-[#070c18]/95 border border-[#00f0ff]/30 shadow-[0_0_30px_rgba(0,240,255,0.12)] backdrop-blur-2xl h-full flex flex-col justify-between overflow-hidden group">
                 {/* Cyber Corner HUD Brackets */}
                 <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none z-10" />
                 <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-[#ff007f] pointer-events-none z-10" />
@@ -85,19 +85,19 @@ export default function About() {
 
                 <div>
                   {/* Gaming Top Status Meta */}
-                  <div className="flex items-center justify-between pb-2 mb-2 border-b border-white/10 text-xs font-mono pl-1">
-                    <span className="text-[#00ffa3] flex items-center gap-1.5 font-bold text-[10px] sm:text-[11px]">
-                      <Activity className="w-3 h-3 animate-pulse" />
+                  <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10 text-xs font-mono pl-1">
+                    <span className="text-[#00ffa3] flex items-center gap-1.5 font-bold text-[11px] sm:text-xs">
+                      <Activity className="w-3.5 h-3.5 animate-pulse" />
                       STATUS // OPTIMIZED
                     </span>
-                    <span className="text-gray-400 text-[9px] sm:text-[10px]">XP // MAX_LEVEL</span>
+                    <span className="text-gray-400 text-[10px] sm:text-[11px]">XP // MAX_LEVEL</span>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-white font-mono mb-2 pl-1 group-hover:text-[#00f0ff] transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-white font-mono mb-2.5 pl-1 group-hover:text-[#00f0ff] transition-colors">
                     Designing Intelligent Systems for the Future
                   </h3>
                   
-                  <div className="space-y-2 font-mono text-[11px] sm:text-xs text-gray-300 leading-relaxed pl-1">
+                  <div className="space-y-2.5 font-mono text-xs sm:text-[13px] text-gray-300 leading-relaxed pl-1">
                     <p>
                       I am an Information Science Engineering student passionate about Artificial Intelligence, Computer Vision, and Full Stack Development. My work focuses on building intelligent systems, scalable applications, and research-driven solutions that solve real-world problems.
                     </p>
@@ -113,18 +113,18 @@ export default function About() {
                 </div>
 
                 {/* Bottom Subtle Status Chips */}
-                <div className="grid grid-cols-3 gap-2 pt-2.5 mt-2.5 border-t border-white/10 font-mono text-center">
-                  <div className="p-1.5 rounded-lg bg-black/40 border border-[#00f0ff]/20">
-                    <span className="text-[10px] text-[#00f0ff] font-bold block">AI // CV</span>
-                    <span className="text-[8.5px] sm:text-[9px] text-gray-400">Deep Learning</span>
+                <div className="grid grid-cols-3 gap-2.5 pt-3 mt-3 border-t border-white/10 font-mono text-center">
+                  <div className="p-2 rounded-lg bg-black/40 border border-[#00f0ff]/20">
+                    <span className="text-xs text-[#00f0ff] font-bold block">AI // CV</span>
+                    <span className="text-[9px] sm:text-[10px] text-gray-400">Deep Learning</span>
                   </div>
-                  <div className="p-1.5 rounded-lg bg-black/40 border border-[#00ffa3]/20">
-                    <span className="text-[10px] text-[#00ffa3] font-bold block">FULL-STACK</span>
-                    <span className="text-[8.5px] sm:text-[9px] text-gray-400">Enterprise</span>
+                  <div className="p-2 rounded-lg bg-black/40 border border-[#00ffa3]/20">
+                    <span className="text-xs text-[#00ffa3] font-bold block">FULL-STACK</span>
+                    <span className="text-[9px] sm:text-[10px] text-gray-400">Enterprise</span>
                   </div>
-                  <div className="p-1.5 rounded-lg bg-black/40 border border-[#ff007f]/20">
-                    <span className="text-[10px] text-[#ff007f] font-bold block">RESEARCH</span>
-                    <span className="text-[8.5px] sm:text-[9px] text-gray-400">Peer-Reviewed</span>
+                  <div className="p-2 rounded-lg bg-black/40 border border-[#ff007f]/20">
+                    <span className="text-xs text-[#ff007f] font-bold block">RESEARCH</span>
+                    <span className="text-[9px] sm:text-[10px] text-gray-400">Peer-Reviewed</span>
                   </div>
                 </div>
               </div>
@@ -133,13 +133,13 @@ export default function About() {
             {/* Right 3 Stacked Cards — Cyberpunk Gaming HUD Stacks */}
             <motion.div 
               variants={itemVariants}
-              className="lg:col-span-5 flex flex-col gap-2.5 sm:gap-3 h-full"
+              className="lg:col-span-5 flex flex-col gap-3 sm:gap-3.5 h-full"
             >
               {/* Card 1: Education */}
               <motion.div
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
-                className="flex-1 p-3.5 sm:p-4 rounded-2xl bg-[#070c18]/95 border border-white/[0.1] hover:border-[#8a2be2]/60 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(138,43,226,0.25)] backdrop-blur-2xl transition-all relative overflow-hidden group flex flex-col justify-center"
+                className="flex-1 p-4 sm:p-4.5 rounded-2xl bg-[#070c18]/95 border border-white/[0.1] hover:border-[#8a2be2]/60 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(138,43,226,0.25)] backdrop-blur-2xl transition-all relative overflow-hidden group flex flex-col justify-center"
               >
                 {/* Cyber Corner HUD Brackets */}
                 <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#8a2be2] opacity-50 group-hover:opacity-100 transition-opacity" />
@@ -154,22 +154,22 @@ export default function About() {
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-lg bg-[#8a2be2]/20 border border-[#8a2be2]/40 flex items-center justify-center shadow-[0_0_10px_rgba(138,43,226,0.35)] flex-shrink-0 group-hover:scale-105 transition-transform">
-                      <GraduationCap className="w-3 h-3 text-[#c084fc]" />
+                      <GraduationCap className="w-3.5 h-3.5 text-[#c084fc]" />
                     </div>
                     <h4 className="font-mono font-bold text-xs sm:text-sm text-white tracking-wide group-hover:text-[#c084fc] transition-colors">
                       Education
                     </h4>
                   </div>
-                  <span className="text-[8.5px] sm:text-[9px] font-mono font-bold text-gray-500 group-hover:text-[#c084fc] transition-colors">
+                  <span className="text-[9px] sm:text-[10px] font-mono font-bold text-gray-500 group-hover:text-[#c084fc] transition-colors">
                     ACADEMIA // LEVEL_04
                   </span>
                 </div>
                 
                 <div className="flex flex-col gap-0.5 font-mono pl-0.5">
-                  <div className="text-white text-xs sm:text-[13px] font-bold leading-snug">
+                  <div className="text-white text-xs sm:text-[13.5px] font-bold leading-snug">
                     B.Tech in Information Science &amp; Engineering
                   </div>
-                  <div className="text-[#c084fc] text-[11px] font-semibold tracking-wide mt-0.5">
+                  <div className="text-[#c084fc] text-[11px] sm:text-xs font-semibold tracking-wide mt-0.5">
                     NMAM Institute of Technology
                   </div>
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-0.5 text-[10px] sm:text-[11px] text-gray-400">
@@ -188,7 +188,7 @@ export default function About() {
               <motion.div
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
-                className="flex-1 p-3.5 sm:p-4 rounded-2xl bg-[#070c18]/95 border border-white/[0.1] hover:border-[#00f0ff]/60 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] backdrop-blur-2xl transition-all relative overflow-hidden group flex flex-col justify-center"
+                className="flex-1 p-4 sm:p-4.5 rounded-2xl bg-[#070c18]/95 border border-white/[0.1] hover:border-[#00f0ff]/60 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,240,255,0.25)] backdrop-blur-2xl transition-all relative overflow-hidden group flex flex-col justify-center"
               >
                 {/* Cyber Corner HUD Brackets */}
                 <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#00f0ff] opacity-50 group-hover:opacity-100 transition-opacity" />
@@ -203,13 +203,13 @@ export default function About() {
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-lg bg-[#00f0ff]/20 border border-[#00f0ff]/40 flex items-center justify-center shadow-[0_0_10px_rgba(0,240,255,0.35)] flex-shrink-0 group-hover:scale-105 transition-transform">
-                      <BookOpen className="w-3 h-3 text-[#00f0ff]" />
+                      <BookOpen className="w-3.5 h-3.5 text-[#00f0ff]" />
                     </div>
                     <h4 className="font-mono font-bold text-xs sm:text-sm text-white tracking-wide group-hover:text-[#00f0ff] transition-colors">
                       Publications
                     </h4>
                   </div>
-                  <span className="text-[8.5px] sm:text-[9px] font-mono font-bold text-gray-500 group-hover:text-[#00f0ff] transition-colors">
+                  <span className="text-[9px] sm:text-[10px] font-mono font-bold text-gray-500 group-hover:text-[#00f0ff] transition-colors">
                     RESEARCH // PEER_REVIEWED
                   </span>
                 </div>
@@ -238,7 +238,7 @@ export default function About() {
               <motion.div
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
-                className="flex-1 p-3.5 sm:p-4 rounded-2xl bg-[#070c18]/95 border border-white/[0.1] hover:border-[#00ffa3]/60 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,255,163,0.25)] backdrop-blur-2xl transition-all relative overflow-hidden group flex flex-col justify-center"
+                className="flex-1 p-4 sm:p-4.5 rounded-2xl bg-[#070c18]/95 border border-white/[0.1] hover:border-[#00ffa3]/60 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_25px_rgba(0,255,163,0.25)] backdrop-blur-2xl transition-all relative overflow-hidden group flex flex-col justify-center"
               >
                 {/* Cyber Corner HUD Brackets */}
                 <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#00ffa3] opacity-50 group-hover:opacity-100 transition-opacity" />
@@ -253,35 +253,35 @@ export default function About() {
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-lg bg-[#00ffa3]/20 border border-[#00ffa3]/40 flex items-center justify-center shadow-[0_0_10px_rgba(0,255,163,0.35)] flex-shrink-0 group-hover:scale-105 transition-transform">
-                      <Briefcase className="w-3 h-3 text-[#00ffa3]" />
+                      <Briefcase className="w-3.5 h-3.5 text-[#00ffa3]" />
                     </div>
                     <h4 className="font-mono font-bold text-xs sm:text-sm text-white tracking-wide group-hover:text-[#00ffa3] transition-colors">
                       Experience
                     </h4>
                   </div>
-                  <span className="text-[8.5px] sm:text-[9px] font-mono font-bold text-gray-500 group-hover:text-[#00ffa3] transition-colors">
+                  <span className="text-[9px] sm:text-[10px] font-mono font-bold text-gray-500 group-hover:text-[#00ffa3] transition-colors">
                     ACTIVE_ROLE // VERIFIED
                   </span>
                 </div>
                 
                 <div className="flex flex-col gap-0.5 font-mono pl-0.5">
                   <div>
-                    <div className="text-white text-xs sm:text-[13px] font-bold leading-snug">
+                    <div className="text-white text-xs sm:text-[13.5px] font-bold leading-snug">
                       Full Stack Developer Intern
                     </div>
-                    <div className="text-[#00ffa3] font-semibold text-[11px] tracking-wide mt-0.5">
+                    <div className="text-[#00ffa3] font-semibold text-[11px] sm:text-xs tracking-wide mt-0.5">
                       GoPerch Innovations Pvt. Ltd.
                     </div>
-                    <div className="text-[10px] text-gray-400 mt-0.5 flex items-center gap-1.5">
+                    <div className="text-[10px] sm:text-[11px] text-gray-400 mt-0.5 flex items-center gap-1.5">
                       <Calendar className="w-2.5 h-2.5 text-[#ff007f]" /> May 2026 – July 2026
                     </div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-1 pt-0.5">
+                  <div className="flex flex-wrap gap-1.5 pt-1">
                     {["React", "Next.js", "FastAPI", "PostgreSQL", "Full Stack"].map((tech) => (
                       <span 
                         key={tech} 
-                        className="px-1.5 py-0.5 rounded-md bg-black/60 border border-white/10 text-gray-300 text-[8.5px] sm:text-[9px] font-mono hover:border-[#00f0ff]/50 hover:text-[#00f0ff] hover:shadow-[0_0_8px_rgba(0,240,255,0.3)] transition-all"
+                        className="px-2 py-0.5 rounded-md bg-black/60 border border-white/10 text-gray-300 text-[9px] sm:text-[10px] font-mono hover:border-[#00f0ff]/50 hover:text-[#00f0ff] hover:shadow-[0_0_8px_rgba(0,240,255,0.3)] transition-all"
                       >
                         {tech}
                       </span>
@@ -296,7 +296,7 @@ export default function About() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             VIEWPORT 2: PROFESSIONAL RECOGNITION (GOPERCH)
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <div className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-2 lg:py-4">
+        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
           <motion.div
             variants={itemVariants}
             initial="hidden"
@@ -304,9 +304,9 @@ export default function About() {
             viewport={{ once: true, margin: "-50px" }}
             className="w-full max-w-4xl mx-auto"
           >
-            <div className="flex items-center gap-2 mb-2.5 sm:mb-3 justify-center">
-              <Briefcase className="w-3.5 h-3.5 text-[#c084fc]" />
-              <h3 className="font-mono font-bold text-base sm:text-lg text-white tracking-wide">
+            <div className="flex items-center gap-2 mb-3 sm:mb-4 justify-center">
+              <Briefcase className="w-4 h-4 text-[#c084fc]" />
+              <h3 className="font-mono font-bold text-lg sm:text-xl text-white tracking-wide">
                 Professional Recognition
               </h3>
             </div>
@@ -315,7 +315,7 @@ export default function About() {
               {/* Cyber glow behind card */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#00f0ff]/20 via-[#8a2be2]/20 to-[#ff007f]/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500" />
               
-              <div className="relative p-4 sm:p-5 lg:p-6 rounded-3xl bg-[#070c18]/95 backdrop-blur-2xl border border-white/[0.08] shadow-[0_0_40px_rgba(0,0,0,0.8)] flex flex-col gap-3 overflow-hidden">
+              <div className="relative p-5 sm:p-6 lg:p-7 rounded-3xl bg-[#070c18]/95 backdrop-blur-2xl border border-white/[0.08] shadow-[0_0_40px_rgba(0,0,0,0.8)] flex flex-col gap-3.5 overflow-hidden">
                 {/* Giant Ambient Background Logo Shadow Watermark */}
                 <div className="absolute -right-4 -bottom-8 opacity-[0.14] pointer-events-none z-0 transform -rotate-12 scale-110 select-none">
                   <Image
@@ -360,7 +360,7 @@ export default function About() {
                 </div>
 
                 {/* Description Bullet Points */}
-                <ul className="relative z-10 flex flex-col gap-1.5 text-gray-300 text-[11px] sm:text-xs leading-relaxed font-mono mt-0.5">
+                <ul className="relative z-10 flex flex-col gap-2 text-gray-300 text-xs sm:text-[13px] leading-relaxed font-mono mt-1">
                   <li className="flex items-start gap-2">
                     <span className="text-[#00f0ff] mt-0.5 text-[10px] flex-shrink-0">◆</span>
                     <span>Successfully completed a Full Stack Developer Internship at GoPerch Innovations Pvt. Ltd.</span>
@@ -380,16 +380,16 @@ export default function About() {
                 </ul>
 
                 {/* Tech Badges */}
-                <div className="relative z-10 flex flex-wrap gap-1.5 pt-0.5">
-                  <span className="px-2 py-0.5 rounded-lg bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[#00f0ff] text-[10px] font-mono font-bold shadow-[0_0_8px_rgba(0,240,255,0.15)]">React</span>
-                  <span className="px-2 py-0.5 rounded-lg bg-white/[0.05] border border-white/15 text-gray-300 text-[10px] font-mono font-bold">Next.js</span>
-                  <span className="px-2 py-0.5 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] text-[10px] font-mono font-bold shadow-[0_0_8px_rgba(0,255,163,0.15)]">FastAPI</span>
-                  <span className="px-2 py-0.5 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 text-[#c084fc] text-[10px] font-mono font-bold shadow-[0_0_8px_rgba(138,43,226,0.15)]">PostgreSQL</span>
-                  <span className="px-2 py-0.5 rounded-lg bg-[#ff007f]/10 border border-[#ff007f]/30 text-[#ff007f] text-[10px] font-mono font-bold shadow-[0_0_8px_rgba(255,0,127,0.15)]">Full Stack</span>
+                <div className="relative z-10 flex flex-wrap gap-2 pt-1">
+                  <span className="px-2.5 py-1 rounded-lg bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[#00f0ff] text-xs font-mono font-bold shadow-[0_0_8px_rgba(0,240,255,0.15)]">React</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-gray-300 text-xs font-mono font-bold">Next.js</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] text-xs font-mono font-bold shadow-[0_0_8px_rgba(0,255,163,0.15)]">FastAPI</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 text-[#c084fc] text-xs font-mono font-bold shadow-[0_0_8px_rgba(138,43,226,0.15)]">PostgreSQL</span>
+                  <span className="px-2.5 py-1 rounded-lg bg-[#ff007f]/10 border border-[#ff007f]/30 text-[#ff007f] text-xs font-mono font-bold shadow-[0_0_8px_rgba(255,0,127,0.15)]">Full Stack</span>
                 </div>
 
                 {/* Verified Credentials Actions */}
-                <div className="relative z-10 flex flex-col sm:flex-row items-center gap-2.5 mt-0.5 border-t border-white/10 pt-3">
+                <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3 mt-1 border-t border-white/10 pt-3.5">
                   <motion.a
                     href="https://drive.google.com/file/d/1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm/view"
                     target="_blank"
@@ -399,7 +399,7 @@ export default function About() {
                     onClick={() => sounds.playClick()}
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto h-[38px] sm:h-[40px] px-4 rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white text-xs font-bold font-mono shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_rgba(255,0,127,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full sm:w-auto h-[42px] sm:h-[44px] px-5 rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white text-xs sm:text-sm font-bold font-mono shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_rgba(255,0,127,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
                     <span>View Completion Letter</span>
@@ -414,7 +414,7 @@ export default function About() {
                     onClick={() => sounds.playSuccess()}
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto h-[38px] sm:h-[40px] px-4 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#00f0ff]/40 text-gray-200 hover:text-white text-xs font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                    className="w-full sm:w-auto h-[42px] sm:h-[44px] px-5 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#00f0ff]/40 text-gray-200 hover:text-white text-xs sm:text-sm font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span>Download PDF</span>
@@ -429,7 +429,7 @@ export default function About() {
                     onClick={() => sounds.playClick()}
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto h-[38px] sm:h-[40px] px-4 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#ffb800]/40 text-gray-200 hover:text-white text-xs font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                    className="w-full sm:w-auto h-[42px] sm:h-[44px] px-5 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#ffb800]/40 text-gray-200 hover:text-white text-xs sm:text-sm font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   >
                     <Trophy className="w-3.5 h-3.5 text-[#ffb800]" />
                     <span>Offer Letter</span>

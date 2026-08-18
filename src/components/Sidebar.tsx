@@ -195,21 +195,24 @@ export default function Sidebar() {
 
         {/* Profile Card Section */}
         <div className="flex flex-col items-center text-center mt-0 relative z-10">
-          {/* Avatar Container with Cyber Corner Accents */}
-          <div className="relative group shrink-0">
+          {/* Avatar Container with Cyber Corner Accents & Interactive Zoom */}
+          <div 
+            className="relative group shrink-0 cursor-pointer"
+            onMouseEnter={() => sounds.playHover()}
+          >
             {/* Cyber Corner Notches */}
-            <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-[#00f0ff] opacity-75 group-hover:opacity-100 transition-opacity" />
-            <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-[#ff007f] opacity-75 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute -top-1.5 -left-1.5 w-3.5 h-3.5 border-t-2 border-l-2 border-[#00f0ff] opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300" />
+            <div className="absolute -bottom-1.5 -right-1.5 w-3.5 h-3.5 border-b-2 border-r-2 border-[#ff007f] opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300" />
 
-            {/* Prominent Authentic Portrait */}
-            <div className="relative w-24 h-24 xl:w-28 xl:h-28 2xl:w-32 2xl:h-32 rounded-2xl p-[2px] bg-gradient-to-br from-[#00f0ff] via-[#8a2be2] to-[#ff007f] shadow-[0_0_20px_rgba(0,240,255,0.4)] shrink-0">
+            {/* Prominent Authentic Portrait with Smooth Interactive Zoom */}
+            <div className="relative w-28 h-28 xl:w-32 xl:h-32 2xl:w-36 2xl:h-36 rounded-2xl p-[2px] bg-gradient-to-br from-[#00f0ff] via-[#8a2be2] to-[#ff007f] shadow-[0_0_20px_rgba(0,240,255,0.4)] group-hover:shadow-[0_0_35px_rgba(0,240,255,0.7)] transition-all duration-500 ease-out shrink-0 overflow-hidden">
               <div className="w-full h-full rounded-[14px] overflow-hidden relative bg-[#070c18]">
                 <Image 
                   src="/profile_original.png" 
                   alt="Vignesh N Salian" 
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 1280px) 112px, 128px"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-120"
+                  sizes="(max-width: 1280px) 128px, 144px"
                   priority
                 />
               </div>

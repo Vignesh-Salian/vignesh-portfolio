@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[calc(100dvh-2.5rem)] flex items-center justify-center pt-2 sm:pt-4 pb-4 sm:pb-6 relative overflow-hidden"
+      className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex items-center justify-center py-4 lg:py-6 relative overflow-hidden"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[450px] bg-[#00f0ff]/10 blur-[160px] pointer-events-none rounded-full" />
@@ -61,9 +61,9 @@ export default function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center w-full relative z-10">
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            LEFT COLUMN — 7 of 12 cols
+            LEFT COLUMN — 7 of 12 cols (Order 1 everywhere)
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <div className="lg:col-span-7 flex flex-col gap-5 sm:gap-6 order-2 lg:order-1 relative">
+        <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-5 order-1 lg:order-1 relative">
           
           {/* Welcome Badge / HUD Status */}
           <motion.div
@@ -72,7 +72,7 @@ export default function Hero() {
             transition={{ duration: 0.5, ease: smoothEase }}
             className="self-start relative z-10"
           >
-            <span className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#070c18]/90 border border-[#00f0ff]/30 text-xs font-mono font-medium text-[#00f0ff] shadow-[0_0_15px_rgba(0,240,255,0.2)] backdrop-blur-xl">
+            <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#070c18]/90 border border-[#00f0ff]/30 text-xs font-mono font-medium text-[#00f0ff] shadow-[0_0_15px_rgba(0,240,255,0.2)] backdrop-blur-xl">
               <span className="w-2 h-2 rounded-full bg-[#00ffa3] animate-ping" />
               <span>Welcome to my portfolio</span>
             </span>
@@ -83,7 +83,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: smoothEase }}
-            className="font-mono font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight relative z-10"
+            className="font-mono font-extrabold text-3xl sm:text-4xl lg:text-4xl xl:text-5xl tracking-tight leading-tight relative z-10"
           >
             <span className="text-white">Vignesh </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] via-[#c084fc] to-[#ff007f] neon-glow-cyan">
@@ -91,12 +91,12 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* Typing Animation */}
+          {/* Typing Animation — High Contrast Neon */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="h-9 flex items-center relative z-10"
+            className="h-8 flex items-center relative z-10"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -105,11 +105,13 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.3, ease: smoothEase }}
-                className="font-mono font-bold text-lg sm:text-xl text-[#00ffa3] flex items-center gap-2"
+                className="font-mono font-bold text-base sm:text-lg lg:text-xl text-[#00ffa3] flex items-center gap-2 drop-shadow-[0_0_10px_rgba(0,255,163,0.6)]"
               >
-                <span className="text-gray-500">&gt;</span>
-                <span className="text-gradient-arcade">{titles[titleIndex]}</span>
-                <span className="w-1.5 h-4 bg-[#00f0ff] animate-pulse inline-block" />
+                <span className="text-[#00f0ff] font-extrabold">&gt;</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ffa3] via-[#00f0ff] to-[#38bdf8] font-extrabold">
+                  {titles[titleIndex]}
+                </span>
+                <span className="w-1.5 h-4 bg-[#00f0ff] animate-pulse inline-block shadow-[0_0_8px_#00f0ff]" />
               </motion.div>
             </AnimatePresence>
           </motion.div>
@@ -241,9 +243,9 @@ export default function Hero() {
         </div>
 
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            RIGHT COLUMN — 5 of 12 cols (Centered vertically)
+            RIGHT COLUMN — 5 of 12 cols (Order 2 everywhere)
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <div className="lg:col-span-5 flex flex-col justify-center items-center gap-4 relative order-1 lg:order-2 w-full max-w-[450px] mx-auto lg:ml-auto lg:self-center">
+        <div className="lg:col-span-5 flex flex-col justify-center items-center gap-4 relative order-2 lg:order-2 w-full max-w-[450px] mx-auto lg:ml-auto lg:self-center">
 
           {/* Terminal Card */}
           <motion.div

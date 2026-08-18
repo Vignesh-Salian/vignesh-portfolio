@@ -111,12 +111,12 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-8 sm:py-10 border-t border-[#00f0ff]/20 relative">
+    <section id="skills" className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-4 sm:py-6 border-t border-[#00f0ff]/20 relative overflow-hidden">
       {/* Background Ambient Lighting */}
       <div className="absolute top-1/4 left-10 w-80 h-80 bg-[#00f0ff]/10 blur-[140px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#8a2be2]/12 blur-[140px] pointer-events-none rounded-full" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">

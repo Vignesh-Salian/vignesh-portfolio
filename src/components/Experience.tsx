@@ -192,12 +192,12 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-8 sm:py-10 border-t border-[#00f0ff]/20 relative">
+    <section id="experience" className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-6 sm:py-8 border-t border-[#00f0ff]/20 relative overflow-hidden">
       {/* Background ambient light glow */}
       <div className="absolute top-1/4 right-0 w-80 h-80 bg-[#8a2be2]/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 left-0 w-80 h-80 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         {/* Section Header */}
         <div className="space-y-1.5 mb-8">
           <div className="flex items-center gap-2">

@@ -164,16 +164,16 @@ export default function BeyondAlgorithms() {
   };
 
   return (
-    <section 
-      id="beyond-algorithms" 
+    <section
       ref={sectionRef}
-      className="py-6 sm:py-8 border-t border-[#00f0ff]/20 relative"
+      id="beyond-algorithms"
+      className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-4 sm:py-6 border-t border-[#00f0ff]/20 relative overflow-hidden"
     >
       {/* Subtle ambient background glow */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-[#8a2be2]/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-[#ff007f]/10 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         
         {/* Section Header: Clean & Compact */}
         <motion.div

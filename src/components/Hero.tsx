@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-0 lg:min-h-screen flex items-center justify-center py-6 lg:py-8 relative overflow-hidden"
+      className="min-h-0 lg:min-h-screen flex flex-col justify-center pt-2 sm:pt-4 lg:pt-2 pb-6 lg:pb-8 relative overflow-hidden"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[450px] bg-[#00f0ff]/10 blur-[160px] pointer-events-none rounded-full" />
@@ -121,7 +121,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25, ease: smoothEase }}
-            className="font-mono text-xs sm:text-sm lg:text-[13.5px] leading-relaxed text-gray-300 max-w-xl relative z-10"
+            className="font-mono text-xs sm:text-sm lg:text-[14px] leading-relaxed text-gray-300 max-w-xl relative z-10"
           >
             I am an Information Science Engineering student passionate about
             Artificial Intelligence, Computer Vision, and Full Stack Development.
@@ -129,42 +129,68 @@ export default function Hero() {
             scalable software solutions to solve real-world problems.
           </motion.p>
 
-          {/* Buttons */}
+          {/* Gamified Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35, ease: smoothEase }}
             className="flex flex-col sm:flex-row flex-wrap items-center relative z-10 gap-3.5 pt-1"
           >
-            <button
+            {/* 1. View Projects Button */}
+            <motion.button
               onClick={() => scrollTo("projects")}
               onMouseEnter={() => sounds.playHover()}
-              className="w-full sm:w-auto px-6 h-[46px] rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white font-mono font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_30px_rgba(255,0,127,0.5)] hover:scale-[1.02] active:scale-98 transition-all flex justify-center items-center gap-2 cursor-pointer"
+              whileHover={{ scale: 1.02, y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative group/btn w-full sm:w-auto px-6 h-[46px] rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white font-mono font-bold text-xs sm:text-sm shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_30px_rgba(255,0,127,0.55)] transition-all flex justify-center items-center gap-2 cursor-pointer overflow-hidden"
             >
+              <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-white/60 pointer-events-none" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-white/60 pointer-events-none" />
+              <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
               <span>View Projects</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+              <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
+            </motion.button>
 
-            <a
+            {/* 2. Download Resume Button (Gamified Cyber HUD) */}
+            <motion.a
               href="https://drive.google.com/uc?export=download&id=1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => sounds.playHover()}
               onClick={() => sounds.playSuccess()}
-              className="w-full sm:w-auto px-6 h-[46px] rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-[#00f0ff]/30 text-white font-mono font-semibold text-xs sm:text-sm shadow-[0_0_12px_rgba(0,240,255,0.12)] hover:border-[#00f0ff] transition-all flex justify-center items-center gap-2 cursor-pointer"
+              whileHover={{ scale: 1.02, y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative group/btn w-full sm:w-auto px-5 h-[46px] rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-[#00f0ff]/40 hover:border-[#00ffa3] text-white font-mono font-bold text-xs sm:text-sm shadow-[0_0_15px_rgba(0,240,255,0.18)] hover:shadow-[0_0_25px_rgba(0,255,163,0.4)] transition-all flex justify-center items-center gap-2.5 cursor-pointer overflow-hidden"
             >
-              <Download className="w-3.5 h-3.5 animate-bounce text-[#00f0ff]" />
-              <span>Download Resume</span>
-            </a>
+              {/* Cyber Corner HUD Brackets */}
+              <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#00f0ff] group-hover/btn:border-[#00ffa3] transition-colors pointer-events-none" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#00ffa3] pointer-events-none" />
+              <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-[#00ffa3]/15 to-transparent pointer-events-none" />
+              
+              <div className="w-5 h-5 rounded-lg bg-[#00ffa3]/15 border border-[#00ffa3]/30 flex items-center justify-center text-[#00ffa3] group-hover/btn:scale-110 transition-transform">
+                <Download className="w-3 h-3 animate-bounce" />
+              </div>
+              <span className="text-gray-200 group-hover/btn:text-[#00ffa3] transition-colors">Download Resume</span>
+            </motion.a>
 
-            <button
+            {/* 3. Contact Me Button (Gamified Cyber HUD) */}
+            <motion.button
               onClick={() => scrollTo("contact")}
               onMouseEnter={() => sounds.playHover()}
-              className="w-full sm:w-auto px-6 h-[46px] rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-gray-200 hover:text-white font-mono text-xs sm:text-sm transition-all flex justify-center items-center gap-2 cursor-pointer"
+              whileHover={{ scale: 1.02, y: -1 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative group/btn w-full sm:w-auto px-5 h-[46px] rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-[#8a2be2]/40 hover:border-[#ff007f] text-white font-mono font-bold text-xs sm:text-sm shadow-[0_0_15px_rgba(138,43,226,0.18)] hover:shadow-[0_0_25px_rgba(255,0,127,0.4)] transition-all flex justify-center items-center gap-2.5 cursor-pointer overflow-hidden"
             >
-              <Mail className="w-3.5 h-3.5 text-[#a855f7]" />
-              <span>Contact Me</span>
-            </button>
+              {/* Cyber Corner HUD Brackets */}
+              <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#8a2be2] group-hover/btn:border-[#ff007f] transition-colors pointer-events-none" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#ff007f] pointer-events-none" />
+              <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-[#ff007f]/15 to-transparent pointer-events-none" />
+              
+              <div className="w-5 h-5 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 flex items-center justify-center text-[#c084fc] group-hover/btn:scale-110 transition-transform">
+                <Mail className="w-3 h-3 text-[#c084fc]" />
+              </div>
+              <span className="text-gray-200 group-hover/btn:text-[#ff007f] transition-colors">Contact Me</span>
+            </motion.button>
           </motion.div>
 
           {/* Personal Info */}

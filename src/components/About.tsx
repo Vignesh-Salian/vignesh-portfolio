@@ -296,13 +296,13 @@ export default function About() {
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             VIEWPORT 2: PROFESSIONAL RECOGNITION (GOPERCH)
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
+        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center pt-2 sm:pt-4 lg:pt-2 pb-6 lg:pb-8">
           <motion.div
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="w-full max-w-4xl mx-auto"
+            className="w-full max-w-4xl xl:max-w-5xl mx-auto"
           >
             <div className="flex items-center gap-2 mb-3 sm:mb-4 justify-center">
               <Briefcase className="w-4 h-4 text-[#c084fc]" />
@@ -313,9 +313,15 @@ export default function About() {
     
             <div className="relative group">
               {/* Cyber glow behind card */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#00f0ff]/20 via-[#8a2be2]/20 to-[#ff007f]/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#00f0ff]/30 via-[#8a2be2]/25 to-[#ff007f]/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-85 transition duration-500 pointer-events-none" />
               
-              <div className="relative p-5 sm:p-6 lg:p-7 rounded-3xl bg-[#070c18]/95 backdrop-blur-2xl border border-white/[0.08] shadow-[0_0_40px_rgba(0,0,0,0.8)] flex flex-col gap-3.5 overflow-hidden">
+              <div className="relative p-6 sm:p-7 lg:p-8 rounded-3xl bg-[#070c18]/95 backdrop-blur-2xl border-2 border-[#00f0ff]/40 hover:border-[#00f0ff]/75 shadow-[0_0_35px_rgba(0,240,255,0.2)] hover:shadow-[0_0_50px_rgba(0,240,255,0.35)] flex flex-col gap-4 overflow-hidden transition-all duration-300">
+                {/* Cyber Corner HUD Brackets */}
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none z-20" />
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#00ffa3] pointer-events-none z-20" />
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#8a2be2] pointer-events-none z-20" />
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#ff007f] pointer-events-none z-20" />
+
                 {/* Giant Ambient Background Logo Shadow Watermark */}
                 <div className="absolute -right-4 -bottom-8 opacity-[0.14] pointer-events-none z-0 transform -rotate-12 scale-110 select-none">
                   <Image
@@ -328,30 +334,27 @@ export default function About() {
                 </div>
 
                 {/* Header */}
-                <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 text-center sm:text-left">
+                <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-3.5 sm:gap-4 text-center sm:text-left">
                   {/* Company Logo with 3D Gaming Bird Fly-Out Burst Effect */}
                   <div 
-                    className="relative w-16 h-16 sm:w-18 sm:h-18 flex-shrink-0 flex items-center justify-center group/logo hover:scale-105 transition-all duration-300 ease-out bg-[#070c18] border border-white/20 rounded-2xl"
-                    style={{
-                      boxShadow: "0 0 30px rgba(0,240,255,0.45), 0 0 60px rgba(138,43,226,0.3), 0 10px 25px rgba(0,0,0,0.85)",
-                    }}
+                    className="relative w-18 h-18 sm:w-20 sm:h-20 flex-shrink-0 flex items-center justify-center group/logo hover:scale-105 transition-all duration-300 ease-out bg-[#070c18] border border-[#00f0ff]/40 rounded-2xl shadow-[0_0_25px_rgba(0,240,255,0.4)]"
                   >
-                    <CyberBirdFlyoutPortal size={54} />
+                    <CyberBirdFlyoutPortal size={58} />
                   </div>
 
                   <div className="flex flex-col justify-center font-mono">
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-0.5 tracking-tight">
+                    <h4 className="text-lg sm:text-xl font-bold text-white mb-0.5 tracking-tight">
                       GoPerch Innovations Pvt. Ltd.
                     </h4>
                     <div className="text-[#00f0ff] font-semibold text-xs sm:text-sm mb-1">
                       Full Stack Developer Intern
                     </div>
-                    <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-[10px] sm:text-[11px] text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3 text-[#ff007f]" />
+                    <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs text-gray-400">
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5 text-[#ff007f]" />
                         <span>May 2026 — July 2026</span>
                       </div>
-                      <div className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] font-bold shadow-[0_0_10px_rgba(0,255,163,0.2)]">
+                      <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] font-bold shadow-[0_0_10px_rgba(0,255,163,0.2)]">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#00ffa3] animate-pulse" />
                         <span>Internship Completed • July 2026</span>
                       </div>
@@ -360,32 +363,32 @@ export default function About() {
                 </div>
 
                 {/* Description Bullet Points */}
-                <ul className="relative z-10 flex flex-col gap-2 text-gray-300 text-xs sm:text-[13px] leading-relaxed font-mono mt-1">
+                <ul className="relative z-10 flex flex-col gap-2.5 text-gray-300 text-xs sm:text-[13.5px] leading-relaxed font-mono mt-1">
                   <li className="flex items-start gap-2">
-                    <span className="text-[#00f0ff] mt-0.5 text-[10px] flex-shrink-0">◆</span>
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
                     <span>Successfully completed a Full Stack Developer Internship at GoPerch Innovations Pvt. Ltd.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#00f0ff] mt-0.5 text-[10px] flex-shrink-0">◆</span>
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
                     <span>Developed and maintained enterprise-grade web applications using React, Next.js, FastAPI, SQLAlchemy, and PostgreSQL.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#00f0ff] mt-0.5 text-[10px] flex-shrink-0">◆</span>
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
                     <span>Built and integrated scalable REST APIs, implemented role-based access control, optimized database operations, and collaborated on real-world enterprise software.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#00f0ff] mt-0.5 text-[10px] flex-shrink-0">◆</span>
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
                     <span>Fixed production bugs, performed end-to-end testing, resolved Git merge conflicts, and collaborated with the development team using Git and GitHub.</span>
                   </li>
                 </ul>
 
                 {/* Tech Badges */}
                 <div className="relative z-10 flex flex-wrap gap-2 pt-1">
-                  <span className="px-2.5 py-1 rounded-lg bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[#00f0ff] text-xs font-mono font-bold shadow-[0_0_8px_rgba(0,240,255,0.15)]">React</span>
-                  <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-gray-300 text-xs font-mono font-bold">Next.js</span>
-                  <span className="px-2.5 py-1 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] text-xs font-mono font-bold shadow-[0_0_8px_rgba(0,255,163,0.15)]">FastAPI</span>
-                  <span className="px-2.5 py-1 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 text-[#c084fc] text-xs font-mono font-bold shadow-[0_0_8px_rgba(138,43,226,0.15)]">PostgreSQL</span>
-                  <span className="px-2.5 py-1 rounded-lg bg-[#ff007f]/10 border border-[#ff007f]/30 text-[#ff007f] text-xs font-mono font-bold shadow-[0_0_8px_rgba(255,0,127,0.15)]">Full Stack</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[#00f0ff] text-xs font-mono font-bold shadow-[0_0_8px_rgba(0,240,255,0.15)]">React</span>
+                  <span className="px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-gray-300 text-xs font-mono font-bold">Next.js</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] text-xs font-mono font-bold shadow-[0_0_8px_rgba(0,255,163,0.15)]">FastAPI</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 text-[#c084fc] text-xs font-mono font-bold shadow-[0_0_8px_rgba(138,43,226,0.15)]">PostgreSQL</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#ff007f]/10 border border-[#ff007f]/30 text-[#ff007f] text-xs font-mono font-bold shadow-[0_0_8px_rgba(255,0,127,0.15)]">Full Stack</span>
                 </div>
 
                 {/* Verified Credentials Actions */}
@@ -399,7 +402,7 @@ export default function About() {
                     onClick={() => sounds.playClick()}
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto h-[42px] sm:h-[44px] px-5 rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white text-xs sm:text-sm font-bold font-mono shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_rgba(255,0,127,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full sm:w-auto h-[44px] sm:h-[46px] px-6 rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white text-xs sm:text-sm font-bold font-mono shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_rgba(255,0,127,0.45)] transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
                     <span>View Completion Letter</span>
@@ -414,7 +417,7 @@ export default function About() {
                     onClick={() => sounds.playSuccess()}
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto h-[42px] sm:h-[44px] px-5 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#00f0ff]/40 text-gray-200 hover:text-white text-xs sm:text-sm font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                    className="w-full sm:w-auto h-[44px] sm:h-[46px] px-6 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#00f0ff]/40 text-gray-200 hover:text-white text-xs sm:text-sm font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span>Download PDF</span>
@@ -429,7 +432,7 @@ export default function About() {
                     onClick={() => sounds.playClick()}
                     whileHover={{ scale: 1.02, y: -1 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto h-[42px] sm:h-[44px] px-5 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#ffb800]/40 text-gray-200 hover:text-white text-xs sm:text-sm font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
+                    className="w-full sm:w-auto h-[44px] sm:h-[46px] px-6 rounded-xl bg-[#070c18] hover:bg-[#0c1322] border border-white/15 hover:border-[#ffb800]/40 text-gray-200 hover:text-white text-xs sm:text-sm font-bold font-mono transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                   >
                     <Trophy className="w-3.5 h-3.5 text-[#ffb800]" />
                     <span>Offer Letter</span>

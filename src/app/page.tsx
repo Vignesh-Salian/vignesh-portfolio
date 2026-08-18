@@ -24,7 +24,7 @@ export default function Home() {
       <Sidebar />
 
       {/* Main Content Flow */}
-      <div className="lg:pl-80 xl:pl-[340px] 2xl:pl-[360px] w-full transition-all duration-300 relative z-10">
+      <div className="lg:pl-72 xl:pl-80 2xl:pl-[340px] w-full transition-all duration-300 relative z-10">
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-16 sm:pt-20 lg:pt-0 pb-8 flex flex-col gap-0">
           {/* 1. Hero Section */}
           <Hero />

@@ -188,7 +188,7 @@ export default function Sidebar() {
       </AnimatePresence>
 
       {/* Desktop HUD Commander Sidebar */}
-      <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-80 xl:w-[340px] 2xl:w-[360px] flex-col justify-between z-30 bg-[#050814]/95 backdrop-blur-3xl border-r border-[#00f0ff]/20 p-3.5 xl:p-4.5 overflow-y-auto overflow-x-hidden shadow-[0_0_40px_rgba(0,0,0,0.85)]">
+      <aside className="hidden lg:flex fixed top-0 left-0 h-screen w-72 xl:w-80 2xl:w-[340px] flex-col justify-between z-30 bg-[#050814]/95 backdrop-blur-3xl border-r border-[#00f0ff]/20 p-3.5 xl:p-4.5 overflow-y-auto overflow-x-hidden shadow-[0_0_40px_rgba(0,0,0,0.85)]">
         
         {/* Ambient Top Glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-32 bg-[#00f0ff]/10 blur-3xl pointer-events-none rounded-full" />

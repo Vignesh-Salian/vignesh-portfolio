@@ -72,7 +72,7 @@ export default function Hero() {
             transition={{ duration: 0.5, ease: smoothEase }}
             className="self-start relative z-10"
           >
-            <span className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#070c18]/90 border border-[#00f0ff]/30 text-xs font-mono font-medium text-[#00f0ff] shadow-[0_0_15px_rgba(0,240,255,0.2)] backdrop-blur-xl">
+            <span className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#070c18]/90 border border-[#00f0ff]/30 text-xs font-mono font-medium text-[#00f0ff] shadow-[0_0_15px_rgba(0,240,255,0.2)] backdrop-blur-xl">
               <span className="w-2 h-2 rounded-full bg-[#00ffa3] animate-ping" />
               <span>Welcome to my portfolio</span>
             </span>
@@ -83,10 +83,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: smoothEase }}
-            className="font-mono font-extrabold text-3xl sm:text-4xl lg:text-4xl xl:text-5xl tracking-tight leading-tight relative z-10"
+            className="font-mono font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight relative z-10"
           >
             <span className="text-white">Vignesh </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] via-[#c084fc] to-[#ff007f] neon-glow-cyan">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] via-[#c084fc] to-[#ff007f] drop-shadow-[0_0_16px_rgba(0,240,255,0.5)] drop-shadow-[0_0_32px_rgba(192,132,252,0.35)]">
               N Salian
             </span>
           </motion.h1>
@@ -96,7 +96,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="h-8 flex items-center relative z-10"
+            className="h-9 flex items-center relative z-10"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -105,7 +105,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.3, ease: smoothEase }}
-                className="font-mono font-bold text-base sm:text-lg lg:text-xl text-[#00ffa3] flex items-center gap-2 drop-shadow-[0_0_10px_rgba(0,255,163,0.6)]"
+                className="font-mono font-bold text-lg sm:text-xl lg:text-2xl text-[#00ffa3] flex items-center gap-2 drop-shadow-[0_0_10px_rgba(0,255,163,0.6)]"
               >
                 <span className="text-[#00f0ff] font-extrabold">&gt;</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ffa3] via-[#00f0ff] to-[#38bdf8] font-extrabold">
@@ -121,7 +121,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25, ease: smoothEase }}
-            className="font-mono text-xs sm:text-sm leading-relaxed text-gray-300 max-w-xl relative z-10"
+            className="font-mono text-xs sm:text-sm lg:text-[13.5px] leading-relaxed text-gray-300 max-w-xl relative z-10"
           >
             I am an Information Science Engineering student passionate about
             Artificial Intelligence, Computer Vision, and Full Stack Development.
@@ -134,7 +134,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35, ease: smoothEase }}
-            className="flex flex-col sm:flex-row flex-wrap items-center relative z-10 gap-3.5 pt-1.5"
+            className="flex flex-col sm:flex-row flex-wrap items-center relative z-10 gap-3.5 pt-1"
           >
             <button
               onClick={() => scrollTo("projects")}

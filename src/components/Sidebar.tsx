@@ -130,7 +130,7 @@ export default function Sidebar() {
               src="/profile_original.png" 
               alt="Vignesh N Salian" 
               fill
-              className="object-cover"
+              className="object-cover object-[center_15%]"
               sizes="40px"
               priority
             />
@@ -242,7 +242,7 @@ export default function Sidebar() {
               exit={{ rotateY: -180, scale: 0.75, opacity: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               style={{ transformStyle: "preserve-3d", perspective: 1400 }}
-              className="relative max-w-[90vw] max-h-[85vh] sm:max-w-[500px] sm:max-h-[500px] xl:max-w-[540px] xl:max-h-[540px] w-full aspect-square flex flex-col items-center justify-center cursor-pointer"
+              className="relative max-w-[88vw] max-h-[82vh] sm:max-w-[420px] sm:max-h-[620px] xl:max-w-[460px] xl:max-h-[680px] w-full aspect-[9/14] flex flex-col items-center justify-center cursor-pointer"
               onClick={(e) => {
                 e.stopPropagation();
                 setIsFullscreenPhoto(false);
@@ -266,12 +266,12 @@ export default function Sidebar() {
                     src="/profile_original.png" 
                     alt="Vignesh N Salian" 
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 90vw, 540px"
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 90vw, 460px"
                     priority
                   />
                   {/* Subtle Neon Scanline Glow Vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 pointer-events-none" />
                 </div>
 
                 {/* HUD Overlay Label */}
@@ -318,7 +318,7 @@ export default function Sidebar() {
                   src="/profile_original.png" 
                   alt="Vignesh N Salian" 
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-120"
+                  className="object-cover object-[center_15%] transition-transform duration-700 ease-out group-hover:scale-115"
                   sizes="(max-width: 1280px) 128px, 144px"
                   priority
                 />

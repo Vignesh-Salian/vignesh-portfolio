@@ -73,7 +73,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-4 sm:py-6 border-t border-[#00f0ff]/20 relative overflow-hidden">
+    <section id="projects" className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8 border-t border-[#00f0ff]/20 relative overflow-hidden">
       {/* Ambient background light */}
       <div className="absolute top-1/3 left-10 w-80 h-80 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#8a2be2]/12 blur-[150px] pointer-events-none rounded-full" />
@@ -81,13 +81,13 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
           <div className="space-y-1.5">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[10px] font-mono font-bold text-[#00f0ff]">
-              <Sparkles className="w-3 h-3" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-xs font-mono font-bold text-[#00f0ff]">
+              <Sparkles className="w-3.5 h-3.5" />
               <span>PORTFOLIO // DIGITAL_LIBRARY</span>
             </div>
-            <h2 className="font-mono font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+            <h2 className="font-mono font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
               ✦ Featured Projects
             </h2>
             <p className="text-xs sm:text-sm text-gray-400 max-w-[600px] leading-relaxed font-mono">
@@ -101,20 +101,20 @@ export default function Projects() {
             rel="noopener noreferrer"
             onMouseEnter={() => sounds.playHover()}
             onClick={() => sounds.playClick()}
-            className="text-xs font-mono font-bold text-[#00f0ff] hover:text-white transition-all flex items-center gap-1.5 self-start md:self-auto px-3.5 py-2 rounded-xl bg-[#070c18] border border-[#00f0ff]/30 hover:border-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.15)] group/link"
+            className="text-xs sm:text-sm font-mono font-bold text-[#00f0ff] hover:text-white transition-all flex items-center gap-2 self-start md:self-auto px-4 py-2.5 rounded-xl bg-[#070c18] border border-[#00f0ff]/30 hover:border-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.15)] group/link"
           >
             <span>View All Projects</span>
             <span className="transition-transform group-hover/link:translate-x-1">→</span>
           </a>
         </div>
 
-        {/* Projects Grid: 3-column compact responsive cards */}
+        {/* 3-Card Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch"
         >
           {projects.map((proj) => (
             <motion.div
@@ -132,7 +132,7 @@ export default function Projects() {
                 <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-[#ff007f] opacity-30 group-hover:opacity-100 transition-opacity z-20 pointer-events-none" />
 
                 {/* Project Image Panel */}
-                <div className="relative w-full h-[155px] sm:h-[165px] overflow-hidden bg-black/60 border-b border-white/[0.08]">
+                <div className="relative w-full h-[175px] sm:h-[185px] xl:h-[195px] overflow-hidden bg-black/60 border-b border-white/[0.08]">
                   <Image
                     src={proj.image}
                     alt={proj.title}
@@ -144,13 +144,13 @@ export default function Projects() {
                   
                   {/* Badge Overlay */}
                   {proj.badgeText && (
-                    <div className={`absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] font-mono font-bold backdrop-blur-md ${proj.badgeColor}`}>
+                    <div className={`absolute top-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1 rounded-full border text-[11px] font-mono font-bold backdrop-blur-md ${proj.badgeColor}`}>
                       {proj.badgeIcon && (
                         <Image 
                           src={proj.badgeIcon} 
                           alt="" 
-                          width={12} 
-                          height={12} 
+                          width={14} 
+                          height={14} 
                           className="object-contain select-none" 
                         />
                       )}
@@ -160,24 +160,24 @@ export default function Projects() {
                 </div>
 
                 {/* Content Details */}
-                <div className="p-4 sm:p-5 flex flex-col flex-grow justify-between gap-4">
+                <div className="p-5 sm:p-5.5 flex flex-col flex-grow justify-between gap-4">
                   <div>
-                    <h3 className="font-mono font-bold text-sm sm:text-base text-white mb-1.5 group-hover:text-[#00f0ff] transition-colors flex items-center gap-2">
-                      <Image src={proj.icon} alt={`${proj.title} Icon`} width={20} height={20} className="rounded-md object-contain" />
+                    <h3 className="font-mono font-bold text-base sm:text-lg text-white mb-2 group-hover:text-[#00f0ff] transition-colors flex items-center gap-2">
+                      <Image src={proj.icon} alt={`${proj.title} Icon`} width={22} height={22} className="rounded-md object-contain" />
                       <span>{proj.title}</span>
                     </h3>
-                    <p className="text-xs text-gray-300 font-mono leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-gray-300 font-mono leading-relaxed">
                       {proj.description}
                     </p>
                   </div>
 
                   <div>
                     {/* Tech tags */}
-                    <div className="flex flex-wrap gap-1.5 mb-3.5">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {proj.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-2 py-0.5 rounded-md bg-black/40 border border-white/[0.08] text-gray-300 text-[10px] font-mono hover:text-[#00f0ff] hover:border-[#00f0ff]/30 transition-colors"
+                          className="px-2.5 py-1 rounded-md bg-black/40 border border-white/[0.08] text-gray-300 text-xs font-mono hover:text-[#00f0ff] hover:border-[#00f0ff]/30 transition-colors"
                         >
                           #{tag}
                         </span>
@@ -185,7 +185,7 @@ export default function Projects() {
                     </div>
 
                     {/* Gaming Action Button */}
-                    <div className="border-t border-white/[0.08] pt-3 mt-auto">
+                    <div className="border-t border-white/[0.08] pt-3.5 mt-auto">
                       <motion.a
                         href={proj.githubUrl}
                         target="_blank"
@@ -194,7 +194,7 @@ export default function Projects() {
                         onClick={() => sounds.playClick()}
                         whileHover={{ scale: 1.02, y: -1 }}
                         whileTap={{ scale: 0.98 }}
-                        className="group/btn relative w-full h-[40px] flex items-center justify-center gap-2 px-4 rounded-xl bg-gradient-to-r from-[#00f0ff]/15 via-[#8a2be2]/20 to-[#ff007f]/15 border border-[#00f0ff]/40 hover:border-[#00f0ff] hover:bg-gradient-to-r hover:from-[#00f0ff]/25 hover:via-[#8a2be2]/30 hover:to-[#ff007f]/25 text-xs font-mono font-bold text-white transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.15)] hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] overflow-hidden cursor-pointer"
+                        className="group/btn relative w-full h-[42px] sm:h-[44px] flex items-center justify-center gap-2 px-4 rounded-xl bg-gradient-to-r from-[#00f0ff]/15 via-[#8a2be2]/20 to-[#ff007f]/15 border border-[#00f0ff]/40 hover:border-[#00f0ff] hover:bg-gradient-to-r hover:from-[#00f0ff]/25 hover:via-[#8a2be2]/30 hover:to-[#ff007f]/25 text-xs sm:text-sm font-mono font-bold text-white transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.15)] hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] overflow-hidden cursor-pointer"
                       >
                         {/* Gaming Button Corner Brackets */}
                         <div className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 border-[#00f0ff] opacity-60 group-hover/btn:opacity-100 transition-opacity" />

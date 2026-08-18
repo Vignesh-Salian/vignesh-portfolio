@@ -105,7 +105,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-4 sm:py-6 border-t border-[#00f0ff]/20 relative overflow-hidden">
+    <section id="contact" className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8 border-t border-[#00f0ff]/20 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-10 w-80 h-80 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#ff007f]/10 blur-[150px] pointer-events-none rounded-full" />
@@ -113,14 +113,14 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         
         {/* Section Header */}
-        <div className="space-y-1.5 mb-5">
+        <div className="space-y-2 mb-6 sm:mb-8">
           <div className="flex items-center gap-2">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[10px] font-mono font-bold text-[#00f0ff]">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-xs font-mono font-bold text-[#00f0ff]">
               <Sparkles className="w-3.5 h-3.5" />
               <span>COMMUNICATION // SQUAD_TERMINAL</span>
             </div>
           </div>
-          <h2 className="font-mono font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+          <h2 className="font-mono font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight">
             ✦ Let&apos;s Work Together
           </h2>
           <p className="text-xs sm:text-sm text-gray-400 max-w-[650px] leading-relaxed font-mono">
@@ -128,32 +128,32 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Left Column: Direct Coordinates */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#070c18]/95 backdrop-blur-2xl border border-[#00f0ff]/25 shadow-[0_0_25px_rgba(0,0,0,0.6)] h-full flex flex-col justify-between">
+            <div className="p-6 sm:p-7 rounded-2xl bg-[#070c18]/95 backdrop-blur-2xl border border-[#00f0ff]/25 shadow-[0_0_25px_rgba(0,0,0,0.6)] h-full flex flex-col justify-between">
               <div>
-                <h3 className="font-mono font-bold text-base sm:text-lg text-white mb-1.5">
+                <h3 className="font-mono font-bold text-lg sm:text-xl text-white mb-2">
                   Let&apos;s talk about your next project.
                 </h3>
                 
-                <p className="text-xs text-gray-300 font-mono leading-relaxed mb-3">
+                <p className="text-xs sm:text-[13px] text-gray-300 font-mono leading-relaxed mb-4">
                   I&apos;m always open to discussing new opportunities, whether it&apos;s an internship, a full-time role, a research collaboration, or a freelance project. Feel free to reach out!
                 </p>
 
                 {/* Direct coordinates items */}
-                <div className="space-y-2 font-mono">
+                <div className="space-y-3 font-mono">
                   <a
                     href="mailto:salianvignesh05@gmail.com"
-                    className="flex items-center gap-2.5 p-2 rounded-xl bg-black/40 border border-white/[0.06] hover:border-[#00f0ff]/40 transition-colors group"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/[0.06] hover:border-[#00f0ff]/40 transition-colors group"
                   >
-                    <div className="w-7 h-7 rounded-lg bg-[#00f0ff]/10 border border-[#00f0ff]/30 flex items-center justify-center text-[#00f0ff] flex-shrink-0 group-hover:scale-105 transition-transform">
-                      <Mail className="w-3.5 h-3.5" />
+                    <div className="w-8 h-8 rounded-lg bg-[#00f0ff]/10 border border-[#00f0ff]/30 flex items-center justify-center text-[#00f0ff] flex-shrink-0 group-hover:scale-105 transition-transform">
+                      <Mail className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-[9px] text-gray-400">EMAIL</div>
-                      <span className="text-[11px] font-bold text-white group-hover:text-[#00f0ff] transition-colors truncate block">
+                      <div className="text-[10px] text-gray-400">EMAIL</div>
+                      <span className="text-xs sm:text-[13px] font-bold text-white group-hover:text-[#00f0ff] transition-colors truncate block">
                         salianvignesh05@gmail.com
                       </span>
                     </div>
@@ -161,26 +161,26 @@ export default function Contact() {
 
                   <a
                     href="tel:+919535299491"
-                    className="flex items-center gap-2.5 p-2 rounded-xl bg-black/40 border border-white/[0.06] hover:border-[#ff007f]/40 transition-colors group"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/[0.06] hover:border-[#ff007f]/40 transition-colors group"
                   >
-                    <div className="w-7 h-7 rounded-lg bg-[#ff007f]/10 border border-[#ff007f]/30 flex items-center justify-center text-[#ff007f] flex-shrink-0 group-hover:scale-105 transition-transform">
-                      <Phone className="w-3.5 h-3.5" />
+                    <div className="w-8 h-8 rounded-lg bg-[#ff007f]/10 border border-[#ff007f]/30 flex items-center justify-center text-[#ff007f] flex-shrink-0 group-hover:scale-105 transition-transform">
+                      <Phone className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-[9px] text-gray-400">PHONE</div>
-                      <span className="text-[11px] font-bold text-white group-hover:text-[#ff007f] transition-colors truncate block">
+                      <div className="text-[10px] text-gray-400">PHONE</div>
+                      <span className="text-xs sm:text-[13px] font-bold text-white group-hover:text-[#ff007f] transition-colors truncate block">
                         +91 95352 99491
                       </span>
                     </div>
                   </a>
 
-                  <div className="flex items-center gap-2.5 p-2 rounded-xl bg-black/40 border border-white/[0.06]">
-                    <div className="w-7 h-7 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 flex items-center justify-center text-[#00ffa3] flex-shrink-0">
-                      <MapPin className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-black/40 border border-white/[0.06]">
+                    <div className="w-8 h-8 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 flex items-center justify-center text-[#00ffa3] flex-shrink-0">
+                      <MapPin className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-[9px] text-gray-400">LOCATION</div>
-                      <span className="text-[11px] font-bold text-white block">
+                      <div className="text-[10px] text-gray-400">LOCATION</div>
+                      <span className="text-xs sm:text-[13px] font-bold text-white block">
                         Karnataka, India
                       </span>
                     </div>
@@ -189,7 +189,7 @@ export default function Contact() {
               </div>
 
               {/* Social icons */}
-              <div className="pt-3 mt-3 border-t border-white/[0.08] flex items-center gap-2">
+              <div className="pt-4 mt-4 border-t border-white/[0.08] flex items-center gap-2.5">
                 <a
                   href="https://github.com/Vignesh-Salian"
                   target="_blank"
@@ -197,7 +197,7 @@ export default function Contact() {
                   aria-label="GitHub Profile"
                   onMouseEnter={() => sounds.playHover()}
                   onClick={() => sounds.playClick()}
-                  className="w-8 h-8 rounded-lg bg-black/40 border border-white/10 hover:border-[#00f0ff] flex items-center justify-center text-gray-300 hover:text-white transition-all shadow-sm"
+                  className="w-10 h-10 rounded-xl bg-black/40 border border-white/10 hover:border-[#00f0ff] flex items-center justify-center text-gray-300 hover:text-white transition-all shadow-sm"
                 >
                   <GithubIcon />
                 </a>
@@ -209,7 +209,7 @@ export default function Contact() {
                   aria-label="LinkedIn Profile"
                   onMouseEnter={() => sounds.playHover()}
                   onClick={() => sounds.playClick()}
-                  className="w-8 h-8 rounded-lg bg-black/40 border border-white/10 hover:border-[#ff007f] flex items-center justify-center text-gray-300 hover:text-white transition-all shadow-sm"
+                  className="w-10 h-10 rounded-xl bg-black/40 border border-white/10 hover:border-[#ff007f] flex items-center justify-center text-gray-300 hover:text-white transition-all shadow-sm"
                 >
                   <LinkedinIcon />
                 </a>
@@ -219,9 +219,9 @@ export default function Contact() {
                   aria-label="Email"
                   onMouseEnter={() => sounds.playHover()}
                   onClick={() => sounds.playClick()}
-                  className="w-8 h-8 rounded-lg bg-black/40 border border-white/10 hover:border-[#00ffa3] flex items-center justify-center text-gray-300 hover:text-white transition-all shadow-sm"
+                  className="w-10 h-10 rounded-xl bg-black/40 border border-white/10 hover:border-[#00ffa3] flex items-center justify-center text-gray-300 hover:text-white transition-all shadow-sm"
                 >
-                  <Mail className="w-3.5 h-3.5" />
+                  <Mail className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -229,14 +229,14 @@ export default function Contact() {
 
           {/* Right Column: Direct Message Transmission Form */}
           <div className="lg:col-span-7 flex flex-col">
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#070c18]/95 backdrop-blur-2xl border border-[#00f0ff]/30 shadow-[0_0_30px_rgba(0,240,255,0.15)] relative overflow-hidden h-full flex flex-col justify-between">
+            <div className="p-6 sm:p-7 rounded-2xl bg-[#070c18]/95 backdrop-blur-2xl border border-[#00f0ff]/30 shadow-[0_0_30px_rgba(0,240,255,0.15)] relative overflow-hidden h-full flex flex-col justify-between">
               {/* Cyber Corner Notches */}
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#00f0ff] pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#ff007f] pointer-events-none" />
 
-              <div className="border-b border-white/10 pb-3 mb-4">
-                <h3 className="text-base sm:text-lg font-mono font-bold text-white">Send a message</h3>
-                <p className="text-[11px] text-gray-400 font-mono mt-0.5">
+              <div className="border-b border-white/10 pb-3.5 mb-4">
+                <h3 className="text-lg sm:text-xl font-mono font-bold text-white">Send a message</h3>
+                <p className="text-xs text-gray-400 font-mono mt-1">
                   I&apos;d love to hear from you. Fill out the form below and I&apos;ll get back to you as soon as possible.
                 </p>
               </div>
@@ -245,85 +245,110 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="py-8 text-center space-y-3 font-mono"
+                  className="py-10 text-center space-y-3.5 font-mono"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#00ffa3]/20 border border-[#00ffa3]/40 text-[#00ffa3] flex items-center justify-center mx-auto shadow-[0_0_15px_rgba(0,255,163,0.4)]">
-                    <CheckCircle2 className="w-6 h-6" />
+                  <div className="w-14 h-14 rounded-2xl bg-[#00ffa3]/20 border border-[#00ffa3]/40 text-[#00ffa3] flex items-center justify-center mx-auto shadow-[0_0_15px_rgba(0,255,163,0.4)]">
+                    <CheckCircle2 className="w-7 h-7" />
                   </div>
-                  <h4 className="text-lg font-bold text-white">Message sent successfully!</h4>
-                  <p className="text-xs text-gray-300 max-w-sm mx-auto">
+                  <h4 className="text-xl font-bold text-white">Message sent successfully!</h4>
+                  <p className="text-xs sm:text-sm text-gray-300 max-w-sm mx-auto">
                     Thanks for reaching out. I&apos;ll get back to you soon.
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="px-4 py-2 rounded-xl bg-white/[0.05] border border-white/10 text-xs text-[#00f0ff] hover:bg-[#00f0ff]/10 transition-colors cursor-pointer"
+                    className="px-5 py-2.5 rounded-xl bg-white/[0.05] border border-white/10 text-xs sm:text-sm text-[#00f0ff] hover:bg-[#00f0ff]/10 transition-colors cursor-pointer font-bold"
                   >
-                    Send Another Message
+                    Send another message
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-3.5 font-mono">
-                  {status === "error" && errorMessage && (
-                    <div className="p-2.5 rounded-xl bg-[#ff007f]/10 border border-[#ff007f]/30 text-xs text-[#ff007f] flex items-center gap-2">
-                      <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                <form onSubmit={handleSubmit} className="space-y-4 font-mono">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-xs font-bold text-gray-300 mb-1.5 uppercase tracking-wide"
+                    >
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      required
+                      placeholder="e.g. Alex Vance"
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
+                      className="w-full px-4 h-[46px] rounded-xl bg-black/50 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff] transition-all text-xs sm:text-sm"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-xs font-bold text-gray-300 mb-1.5 uppercase tracking-wide"
+                    >
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      placeholder="e.g. alex@cyberdynamics.io"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      className="w-full px-4 h-[46px] rounded-xl bg-black/50 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff] transition-all text-xs sm:text-sm"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-xs font-bold text-gray-300 mb-1.5 uppercase tracking-wide"
+                    >
+                      Your Message
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      required
+                      placeholder="Tell me about your project, idea, or just say hi..."
+                      value={formData.message}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
+                      className="w-full px-4 py-3 h-28 sm:h-32 rounded-xl bg-black/50 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff] transition-all text-xs sm:text-sm resize-none"
+                    />
+                  </div>
+
+                  {errorMessage && (
+                    <div className="flex items-center gap-2 text-xs text-[#ff007f] bg-[#ff007f]/10 border border-[#ff007f]/20 p-2.5 rounded-lg">
+                      <AlertCircle className="w-4 h-4 flex-shrink-0" />
                       <span>{errorMessage}</span>
                     </div>
                   )}
 
-                  <div className="space-y-1">
-                    <label className="text-[11px] text-gray-300 font-bold block">Your Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="e.g. Alex Vance"
-                      className="w-full px-3 py-2.5 rounded-xl bg-black/40 border border-white/10 focus:border-[#00f0ff] focus:outline-none text-xs text-white placeholder-gray-600 transition-colors"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] text-gray-300 font-bold block">Your Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="e.g. alex@cyberdynamics.io"
-                      className="w-full px-3 py-2.5 rounded-xl bg-black/40 border border-white/10 focus:border-[#00f0ff] focus:outline-none text-xs text-white placeholder-gray-600 transition-colors"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] text-gray-300 font-bold block">Your Message</label>
-                    <textarea
-                      name="message"
-                      required
-                      rows={3}
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell me about your project, idea, or just say hi..."
-                      className="w-full px-3 py-2.5 rounded-xl bg-black/40 border border-white/10 focus:border-[#00f0ff] focus:outline-none text-xs text-white placeholder-gray-600 transition-colors resize-none"
-                    />
-                  </div>
-
-                  <button
+                  <motion.button
                     type="submit"
                     disabled={status === "sending"}
-                    onMouseEnter={() => sounds.playHover()}
-                    className="w-full h-[40px] rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] hover:opacity-95 text-white font-bold text-xs shadow-[0_0_20px_rgba(0,240,255,0.3)] hover:shadow-[0_0_30px_rgba(255,0,127,0.5)] hover:scale-[1.01] active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.99 }}
+                    className="w-full h-[48px] sm:h-[50px] rounded-xl bg-gradient-to-r from-[#00f0ff] via-[#8a2be2] to-[#ff007f] text-white font-bold text-xs sm:text-sm tracking-wide shadow-[0_0_20px_rgba(0,240,255,0.3)] hover:shadow-[0_0_30px_rgba(255,0,127,0.5)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-2"
                   >
                     {status === "sending" ? (
-                      <span>Sending Message...</span>
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span>TRANSMITTING...</span>
+                      </>
                     ) : (
                       <>
-                        <Send className="w-3.5 h-3.5" />
+                        <Send className="w-4 h-4" />
                         <span>Send Message</span>
                       </>
                     )}
-                  </button>
+                  </motion.button>
                 </form>
               )}
             </div>

@@ -167,7 +167,7 @@ export default function BeyondAlgorithms() {
     <section
       ref={sectionRef}
       id="beyond-algorithms"
-      className="min-h-0 lg:min-h-[calc(100vh-2rem)] flex flex-col justify-center py-4 sm:py-6 border-t border-[#00f0ff]/20 relative overflow-hidden"
+      className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8 border-t border-[#00f0ff]/20 relative overflow-hidden"
     >
       {/* Subtle ambient background glow */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-[#8a2be2]/10 blur-[150px] pointer-events-none rounded-full" />
@@ -181,36 +181,36 @@ export default function BeyondAlgorithms() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="space-y-1.5 mb-4"
+          className="space-y-2 mb-4 sm:mb-5"
         >
           <div className="flex items-center gap-2">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#8a2be2]/15 border border-[#8a2be2]/30 text-[10px] font-mono font-bold text-[#c084fc]">
-              <Palette className="w-3 h-3" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#8a2be2]/15 border border-[#8a2be2]/30 text-xs font-mono font-bold text-[#c084fc]">
+              <Palette className="w-3.5 h-3.5" />
               <span>DIGITAL_ARCHIVE // ART_VAULT</span>
             </div>
           </div>
           
-          <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight font-mono">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-mono">
             Beyond Algorithms
           </h2>
           
-          <p className="text-[#00f0ff] italic font-medium text-[11px] sm:text-xs font-mono">
+          <p className="text-[#00f0ff] italic font-medium text-xs sm:text-sm font-mono">
             &quot;Engineering trains the mind; art fuels the imagination.&quot;
           </p>
           
-          <p className="text-gray-400 text-xs max-w-2xl leading-relaxed font-mono">
+          <p className="text-gray-300 text-xs sm:text-[13.5px] max-w-3xl leading-relaxed font-mono">
             While I enjoy building intelligent systems and research-driven applications, I also express creativity through pencil sketching. Drawing helps me develop patience, focus, and attention to detail—qualities that complement my engineering mindset.
           </p>
         </motion.div>
 
         {/* Gallery Grid Section */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between pb-1.5 border-b border-white/10">
-            <div className="flex items-center gap-1.5 font-mono text-[11px] text-white font-bold">
-              <Eye className="w-3 h-3 text-[#00ffa3]" />
+        <div className="space-y-3 sm:space-y-4">
+          <div className="flex items-center justify-between pb-2 border-b border-white/10">
+            <div className="flex items-center gap-2 font-mono text-xs sm:text-sm text-white font-bold">
+              <Eye className="w-3.5 h-3.5 text-[#00ffa3]" />
               <span>SELECTED MASTERWORK ARTIFACTS</span>
             </div>
-            <span className="text-[10px] font-mono text-[#00f0ff]">CLICK TO INSPECT IN LIGHTBOX</span>
+            <span className="text-xs font-mono text-[#00f0ff]">CLICK TO INSPECT IN LIGHTBOX</span>
           </div>
 
           <motion.div
@@ -218,7 +218,7 @@ export default function BeyondAlgorithms() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto justify-center"
+            className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto justify-center"
           >
             {artworks.map((art) => {
               const isTiger = art.id === 1;
@@ -263,7 +263,7 @@ export default function BeyondAlgorithms() {
                     transformStyle: "preserve-3d",
                     perspective: 1000,
                   }}
-                  className="group relative rounded-2xl bg-[#070c18]/95 backdrop-blur-2xl border border-white/[0.08] hover:border-[#00f0ff]/50 p-3.5 sm:p-4 flex flex-col justify-between h-full transition-all duration-300 cursor-pointer shadow-[0_0_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_25px_rgba(0,240,255,0.2)] overflow-hidden"
+                  className="group relative rounded-2xl bg-[#070c18]/95 backdrop-blur-2xl border border-white/[0.08] hover:border-[#00f0ff]/50 p-4 sm:p-5 flex flex-col justify-between h-full transition-all duration-300 cursor-pointer shadow-[0_0_20px_rgba(0,0,0,0.6)] hover:shadow-[0_0_25px_rgba(0,240,255,0.2)] overflow-hidden"
                 >
                   {/* Cyber Corner HUD Brackets */}
                   <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#00f0ff] opacity-30 group-hover:opacity-100 transition-opacity z-20 pointer-events-none" />
@@ -277,10 +277,10 @@ export default function BeyondAlgorithms() {
                     }}
                   />
 
-                  <div className="space-y-2.5">
+                  <div className="space-y-3">
                     {/* Original Artwork Image Frame (Portrait Aspect Ratio so full face & eyes are 100% visible) */}
                     <div 
-                      className="relative aspect-[4/5] max-h-[240px] w-full rounded-xl overflow-hidden bg-black/90 border border-white/[0.08] group-hover:border-[#00f0ff]/40 transition-colors flex items-center justify-center"
+                      className="relative aspect-[4/5] max-h-[290px] sm:max-h-[310px] xl:max-h-[330px] w-full rounded-xl overflow-hidden bg-black/90 border border-white/[0.08] group-hover:border-[#00f0ff]/40 transition-colors flex items-center justify-center"
                       style={{
                         transformStyle: "preserve-3d",
                       }}

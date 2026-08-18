@@ -73,7 +73,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-8 sm:py-10 border-t border-[#00f0ff]/20 relative overflow-hidden">
+    <section id="projects" className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8 border-t border-[#00f0ff]/20 relative overflow-hidden">
       {/* Ambient background light */}
       <div className="absolute top-1/3 left-10 w-80 h-80 bg-[#00f0ff]/10 blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#8a2be2]/12 blur-[150px] pointer-events-none rounded-full" />

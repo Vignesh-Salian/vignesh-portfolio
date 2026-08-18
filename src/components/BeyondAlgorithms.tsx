@@ -167,7 +167,7 @@ export default function BeyondAlgorithms() {
     <section
       ref={sectionRef}
       id="beyond-algorithms"
-      className="py-8 sm:py-10 border-t border-[#00f0ff]/20 relative overflow-hidden"
+      className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8 border-t border-[#00f0ff]/20 relative overflow-hidden"
     >
       {/* Subtle ambient background glow */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-[#8a2be2]/10 blur-[150px] pointer-events-none rounded-full" />

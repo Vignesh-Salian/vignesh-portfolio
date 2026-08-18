@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="py-4 sm:py-6 relative overflow-hidden"
+      className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8 relative overflow-hidden"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[450px] bg-[#00f0ff]/10 blur-[160px] pointer-events-none rounded-full" />

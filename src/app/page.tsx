@@ -25,7 +25,7 @@ export default function Home() {
 
       {/* Main Content Flow */}
       <div className="lg:pl-72 xl:pl-80 2xl:pl-[340px] w-full transition-all duration-300 relative z-10">
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-16 sm:pt-20 lg:pt-6 pb-12 flex flex-col gap-10 sm:gap-14">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-16 sm:pt-20 lg:pt-0 pb-0 flex flex-col gap-0">
           {/* 1. Hero Section */}
           <Hero />
 

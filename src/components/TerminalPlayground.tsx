@@ -65,7 +65,7 @@ export default function TerminalPlayground() {
             <p className="font-bold">⚡ Initiating Player Dossier Download (PDF)...</p>
             <p>
               <a 
-                href="https://drive.google.com/uc?export=download&id=1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm" 
+                href="https://drive.google.com/uc?export=download&id=1NhFSD90dW_mvw9rTMBn1zl_g7mLEdHnC" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-[#00f0ff] underline font-bold flex items-center gap-1"

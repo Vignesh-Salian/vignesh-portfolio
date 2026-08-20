@@ -174,7 +174,7 @@ export default function HeroNew() {
             >
               {/* Primary Download Resume CTA */}
               <a
-                href="https://drive.google.com/uc?export=download&id=1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm"
+                href="https://drive.google.com/uc?export=download&id=1NhFSD90dW_mvw9rTMBn1zl_g7mLEdHnC"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => sounds.playHover()}

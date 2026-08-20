@@ -69,7 +69,7 @@ export default function DownloadResumeCta() {
             <div className="flex flex-col sm:flex-row lg:flex-col gap-3 w-full sm:w-auto flex-shrink-0">
               {/* Primary Instant Download Button */}
               <a
-                href="https://drive.google.com/uc?export=download&id=1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm"
+                href="https://drive.google.com/uc?export=download&id=1NhFSD90dW_mvw9rTMBn1zl_g7mLEdHnC"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => sounds.playHover()}
@@ -82,7 +82,7 @@ export default function DownloadResumeCta() {
 
               {/* View Verification Online */}
               <a
-                href="https://drive.google.com/file/d/1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm/view"
+                href="https://drive.google.com/file/d/1NhFSD90dW_mvw9rTMBn1zl_g7mLEdHnC/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => sounds.playHover()}

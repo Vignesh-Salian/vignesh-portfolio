@@ -195,7 +195,7 @@ export default function Sidebar() {
 
               <div className="pt-4 mt-2 border-t border-white/10 flex flex-col gap-3">
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1UcPmV2eEX3dh6t0VF7w4bSIObiKhQYtm"
+                  href="https://drive.google.com/uc?export=download&id=1NhFSD90dW_mvw9rTMBn1zl_g7mLEdHnC"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => sounds.playSuccess()}

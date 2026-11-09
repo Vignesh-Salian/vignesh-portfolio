@@ -324,13 +324,13 @@ export default function About() {
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#ff007f] pointer-events-none z-20" />
 
                 {/* Giant Ambient Background Logo Shadow Watermark */}
-                <div className="absolute -right-4 -bottom-8 opacity-[0.14] pointer-events-none z-0 transform -rotate-12 scale-110 select-none">
+                <div className="absolute -right-6 -bottom-10 opacity-30 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none z-0 transform -rotate-12 scale-125 select-none">
                   <Image
-                    src="/sapiencia_icon.png"
+                    src="/sapiencia_symbol_watermark.png"
                     alt=""
-                    width={380}
-                    height={380}
-                    className="object-contain filter drop-shadow-[0_0_40px_rgba(0,240,255,0.55)] drop-shadow-[0_0_80px_rgba(138,43,226,0.35)]"
+                    width={420}
+                    height={420}
+                    className="object-contain filter drop-shadow-[0_0_35px_rgba(0,240,255,0.65)] drop-shadow-[0_0_70px_rgba(255,184,0,0.35)] drop-shadow-[0_0_90px_rgba(138,43,226,0.35)]"
                   />
                 </div>
 
@@ -470,12 +470,12 @@ export default function About() {
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#ff007f] pointer-events-none z-20" />
 
                 {/* Giant Ambient Background Logo Shadow Watermark */}
-                <div className="absolute -right-4 -bottom-8 opacity-[0.14] pointer-events-none z-0 transform -rotate-12 scale-110 select-none">
+                <div className="absolute -right-6 -bottom-10 opacity-25 group-hover:opacity-35 transition-opacity duration-500 pointer-events-none z-0 transform -rotate-12 scale-125 select-none">
                   <Image
                     src="/goperch_logo_final_v5.png"
                     alt=""
-                    width={380}
-                    height={380}
+                    width={420}
+                    height={420}
                     className="object-contain filter drop-shadow-[0_0_40px_rgba(0,240,255,0.55)] drop-shadow-[0_0_80px_rgba(138,43,226,0.35)]"
                   />
                 </div>

@@ -267,18 +267,18 @@ export default function About() {
                 <div className="flex flex-col gap-0.5 font-mono pl-0.5">
                   <div>
                     <div className="text-white text-xs sm:text-[13.5px] font-bold leading-snug">
-                      Full Stack Developer Intern
+                      AI / Machine Learning Intern
                     </div>
                     <div className="text-[#00ffa3] font-semibold text-[11px] sm:text-xs tracking-wide mt-0.5">
-                      GoPerch Innovations Pvt. Ltd.
+                      Sapiencia.AI • SapienShield
                     </div>
                     <div className="text-[10px] sm:text-[11px] text-gray-400 mt-0.5 flex items-center gap-1.5">
-                      <Calendar className="w-2.5 h-2.5 text-[#ff007f]" /> May 2026 – July 2026
+                      <Calendar className="w-2.5 h-2.5 text-[#00f0ff]" /> Nov 2026 – Present
                     </div>
                   </div>
                   
                   <div className="flex flex-wrap gap-1.5 pt-1">
-                    {["React", "Next.js", "FastAPI", "PostgreSQL", "Full Stack"].map((tech) => (
+                    {["Python", "Machine Learning", "Cybersecurity", "Ubuntu", "AI"].map((tech) => (
                       <span 
                         key={tech} 
                         className="px-2 py-0.5 rounded-md bg-black/60 border border-white/10 text-gray-300 text-[9px] sm:text-[10px] font-mono hover:border-[#00f0ff]/50 hover:text-[#00f0ff] hover:shadow-[0_0_8px_rgba(0,240,255,0.3)] transition-all"
@@ -294,7 +294,172 @@ export default function About() {
         </div>
   
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            VIEWPORT 2: PROFESSIONAL RECOGNITION (GOPERCH)
+            VIEWPORT 2: PROFESSIONAL RECOGNITION (SAPIENCIA.AI)
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
+          <motion.div
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            className="w-full max-w-4xl xl:max-w-5xl mx-auto"
+          >
+            <div className="flex items-center gap-2 mb-3 sm:mb-4 justify-center">
+              <Briefcase className="w-4 h-4 text-[#00f0ff]" />
+              <h3 className="font-mono font-bold text-lg sm:text-xl text-white tracking-wide">
+                Professional Recognition
+              </h3>
+            </div>
+    
+            <div className="relative group">
+              {/* Cyber glow behind card */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#00f0ff]/30 via-[#8a2be2]/25 to-[#ff007f]/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-85 transition duration-500 pointer-events-none" />
+              
+              <div className="relative p-6 sm:p-7 lg:p-8 rounded-3xl bg-[#070c18]/95 backdrop-blur-2xl border-2 border-[#00f0ff]/40 hover:border-[#00f0ff]/75 shadow-[0_0_35px_rgba(0,240,255,0.2)] hover:shadow-[0_0_50px_rgba(0,240,255,0.35)] flex flex-col gap-4 overflow-hidden transition-all duration-300">
+                {/* Cyber Corner HUD Brackets */}
+                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none z-20" />
+                <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#00ffa3] pointer-events-none z-20" />
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#8a2be2] pointer-events-none z-20" />
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#ff007f] pointer-events-none z-20" />
+
+                {/* Giant Ambient Background Logo Shadow Watermark */}
+                <div className="absolute -right-4 -bottom-8 opacity-[0.14] pointer-events-none z-0 transform -rotate-12 scale-110 select-none">
+                  <Image
+                    src="/sapiencia_icon.png"
+                    alt=""
+                    width={380}
+                    height={380}
+                    className="object-contain filter drop-shadow-[0_0_40px_rgba(0,240,255,0.55)] drop-shadow-[0_0_80px_rgba(138,43,226,0.35)]"
+                  />
+                </div>
+
+                {/* Header */}
+                <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-3.5 sm:gap-4 text-center sm:text-left">
+                  {/* Company Logo with Pulsing Cyber Ring */}
+                  <div 
+                    onMouseEnter={() => {
+                      try { sounds.playPowerUp(); } catch {}
+                    }}
+                    className="relative w-18 h-18 sm:w-20 sm:h-20 flex-shrink-0 flex items-center justify-center group/logo hover:scale-105 transition-all duration-300 ease-out bg-[#070c18] border border-[#00f0ff]/40 rounded-2xl shadow-[0_0_25px_rgba(0,240,255,0.4)] overflow-hidden cursor-pointer"
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#00f0ff]/20 via-[#8a2be2]/15 to-[#ff007f]/20 rounded-2xl blur-md group-hover/logo:opacity-100 transition-opacity" />
+                    
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.25, 1],
+                        opacity: [0.3, 0.7, 0.3],
+                      }}
+                      transition={{
+                        duration: 2.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      className="absolute inset-0 rounded-2xl border border-[#00f0ff]/40 pointer-events-none"
+                    />
+
+                    <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none" />
+                    <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#ff007f] pointer-events-none" />
+
+                    <motion.div
+                      animate={{
+                        y: [0, -2, 2, 0],
+                        scale: [1, 1.05, 0.98, 1],
+                      }}
+                      whileHover={{
+                        scale: 1.15,
+                        filter: "brightness(1.4) drop-shadow(0 0 15px #00f0ff)",
+                      }}
+                      transition={{
+                        duration: 3.0,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      className="relative z-10 w-full h-full flex items-center justify-center p-2"
+                    >
+                      <Image
+                        src="/sapiencia_icon.png"
+                        alt="Sapiencia.AI"
+                        width={58}
+                        height={58}
+                        className="object-contain select-none drop-shadow-[0_0_12px_rgba(0,240,255,0.8)] transition-all duration-300"
+                        priority
+                      />
+                    </motion.div>
+                  </div>
+
+                  <div className="flex flex-col justify-center font-mono">
+                    <h4 className="text-lg sm:text-xl font-bold text-white mb-0.5 tracking-tight">
+                      Sapiencia.AI
+                    </h4>
+                    <div className="text-[#00f0ff] font-semibold text-xs sm:text-sm mb-1">
+                      AI / Machine Learning Intern • SapienShield
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 text-xs text-gray-400">
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5 text-[#ff007f]" />
+                        <span>November 2026 — Present</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] font-bold shadow-[0_0_10px_rgba(0,255,163,0.2)]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00ffa3] animate-pulse" />
+                        <span>Currently Working • Active Role</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Description Bullet Points */}
+                <ul className="relative z-10 flex flex-col gap-2.5 text-gray-300 text-xs sm:text-[13.5px] leading-relaxed font-mono mt-1">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
+                    <span>Currently working as an AI / Machine Learning Intern at Sapiencia.AI, contributing to the development of SapienShield, an AI-powered cybersecurity project.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
+                    <span>Working on balanced dataset generation for newly introduced risk categories to support reliable machine learning model development.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
+                    <span>Exploring secure remote Linux workstation environments using Tailscale, SSH, and Ubuntu.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
+                    <span>Contributing to dataset and machine learning model version control and organization.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#00f0ff] mt-0.5 text-xs flex-shrink-0">◆</span>
+                    <span>Collaborating on cybersecurity components involving input scanning, sensitive information detection, and AI-based risk classification.</span>
+                  </li>
+                </ul>
+
+                {/* Tech Badges */}
+                <div className="relative z-10 flex flex-wrap gap-2 pt-1 font-mono">
+                  <span className="px-3 py-1 rounded-lg bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[#00f0ff] text-xs font-bold shadow-[0_0_8px_rgba(0,240,255,0.15)]">Python</span>
+                  <span className="px-3 py-1 rounded-lg bg-white/[0.05] border border-white/15 text-gray-300 text-xs font-bold">Machine Learning</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] text-xs font-bold shadow-[0_0_8px_rgba(0,255,163,0.15)]">Cybersecurity</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#8a2be2]/15 border border-[#8a2be2]/30 text-[#c084fc] text-xs font-bold shadow-[0_0_8px_rgba(138,43,226,0.15)]">Ubuntu / Linux</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#ff007f]/10 border border-[#ff007f]/30 text-[#ff007f] text-xs font-bold shadow-[0_0_8px_rgba(255,0,127,0.15)]">Tailscale &amp; SSH</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#ffb800]/10 border border-[#ffb800]/30 text-[#ffb800] text-xs font-bold shadow-[0_0_8px_rgba(255,184,0,0.15)]">Git &amp; Version Control</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] text-xs font-bold shadow-[0_0_8px_rgba(0,255,163,0.15)]">AI Systems</span>
+                </div>
+
+                {/* Status / Credentials Action footer */}
+                <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-3 mt-1 border-t border-white/10 pt-3.5 font-mono">
+                  <div className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[#00ffa3]/10 border border-[#00ffa3]/30 text-[#00ffa3] text-xs font-semibold shadow-[0_0_15px_rgba(0,255,163,0.15)] w-full sm:w-auto justify-center sm:justify-start">
+                    <span className="w-2 h-2 rounded-full bg-[#00ffa3] animate-pulse" />
+                    <span>Active Internship • Currently in Progress</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-gray-400 text-[11px] w-full sm:w-auto justify-center sm:justify-start">
+                    <Sparkles className="w-3.5 h-3.5 text-[#00f0ff]" />
+                    <span>Completion credentials will be issued upon conclusion</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            VIEWPORT 3: PROFESSIONAL RECOGNITION (GOPERCH)
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
         <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
           <motion.div

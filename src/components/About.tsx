@@ -294,23 +294,24 @@ export default function About() {
         </div>
   
         {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            VIEWPORT 2: PROFESSIONAL RECOGNITION (SAPIENCIA.AI)
+            VIEWPORT 2: PROFESSIONAL RECOGNITION (SAPIENCIA.AI & GOPERCH)
         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
+        <div className="flex flex-col justify-center py-8 sm:py-12 border-t border-white/[0.06]">
           <motion.div
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className="w-full max-w-4xl xl:max-w-5xl mx-auto"
+            className="w-full max-w-4xl xl:max-w-5xl mx-auto flex flex-col gap-6 sm:gap-7"
           >
-            <div className="flex items-center gap-2 mb-3 sm:mb-4 justify-center">
+            <div className="flex items-center gap-2 mb-1 justify-center">
               <Briefcase className="w-4 h-4 text-[#00f0ff]" />
               <h3 className="font-mono font-bold text-lg sm:text-xl text-white tracking-wide">
                 Professional Recognition
               </h3>
             </div>
     
+            {/* Card 1: Sapiencia.AI (Currently Working) */}
             <div className="relative group">
               {/* Cyber glow behind card */}
               <div className="absolute -inset-1 bg-gradient-to-r from-[#00f0ff]/30 via-[#8a2be2]/25 to-[#ff007f]/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-85 transition duration-500 pointer-events-none" />
@@ -455,27 +456,8 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </div>
 
-        {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-            VIEWPORT 3: PROFESSIONAL RECOGNITION (GOPERCH)
-        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-        <div className="min-h-0 lg:min-h-screen flex flex-col justify-center py-6 lg:py-8">
-          <motion.div
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="w-full max-w-4xl xl:max-w-5xl mx-auto"
-          >
-            <div className="flex items-center gap-2 mb-3 sm:mb-4 justify-center">
-              <Briefcase className="w-4 h-4 text-[#c084fc]" />
-              <h3 className="font-mono font-bold text-lg sm:text-xl text-white tracking-wide">
-                Professional Recognition
-              </h3>
-            </div>
-    
+            {/* Card 2: GoPerch Innovations (Internship Completed) */}
             <div className="relative group">
               {/* Cyber glow behind card */}
               <div className="absolute -inset-1 bg-gradient-to-r from-[#00f0ff]/30 via-[#8a2be2]/25 to-[#ff007f]/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-85 transition duration-500 pointer-events-none" />

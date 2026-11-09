@@ -264,24 +264,46 @@ export default function About() {
                   </span>
                 </div>
                 
-                <div className="flex flex-col gap-0.5 font-mono pl-0.5">
-                  <div>
-                    <div className="text-white text-xs sm:text-[13.5px] font-bold leading-snug">
-                      AI / Machine Learning Intern
+                <div className="flex flex-col gap-1.5 font-mono pl-0.5">
+                  {/* Sapiencia.AI (Active Internship) */}
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <Briefcase className="w-3 h-3 text-[#00ffa3] shrink-0" />
+                      <span className="text-[11px] sm:text-xs font-bold text-white truncate">
+                        AI / ML Intern
+                      </span>
+                      <span className="text-[10px] sm:text-[11px] text-[#00ffa3] font-semibold truncate">
+                        @ Sapiencia.AI
+                      </span>
                     </div>
-                    <div className="text-[#00ffa3] font-semibold text-[11px] sm:text-xs tracking-wide mt-0.5">
-                      Sapiencia.AI • SapienShield
+                    <span className="text-[9px] font-bold text-[#00ffa3] px-2 py-0.5 rounded-full bg-[#00ffa3]/15 border border-[#00ffa3]/40 shadow-[0_0_8px_rgba(0,255,163,0.25)] shrink-0 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ffa3] animate-pulse" />
+                      Active
+                    </span>
+                  </div>
+
+                  {/* GoPerch Innovations (Completed Internship) */}
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <Briefcase className="w-3 h-3 text-[#00f0ff] shrink-0" />
+                      <span className="text-[11px] sm:text-xs font-bold text-white truncate">
+                        Full Stack Intern
+                      </span>
+                      <span className="text-[10px] sm:text-[11px] text-gray-300 font-semibold truncate">
+                        @ GoPerch
+                      </span>
                     </div>
-                    <div className="text-[10px] sm:text-[11px] text-gray-400 mt-0.5 flex items-center gap-1.5">
-                      <Calendar className="w-2.5 h-2.5 text-[#00f0ff]" /> Nov 2026 – Present
-                    </div>
+                    <span className="text-[9px] font-bold text-gray-400 px-2 py-0.5 rounded-full bg-white/[0.05] border border-white/10 shrink-0">
+                      Completed
+                    </span>
                   </div>
                   
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {["Python", "Machine Learning", "Cybersecurity", "Ubuntu", "AI"].map((tech) => (
+                  {/* Combined Tech Tags */}
+                  <div className="flex flex-wrap gap-1 pt-0.5">
+                    {["Python", "Machine Learning", "React", "Next.js", "FastAPI", "Cybersecurity"].map((tech) => (
                       <span 
                         key={tech} 
-                        className="px-2 py-0.5 rounded-md bg-black/60 border border-white/10 text-gray-300 text-[9px] sm:text-[10px] font-mono hover:border-[#00f0ff]/50 hover:text-[#00f0ff] hover:shadow-[0_0_8px_rgba(0,240,255,0.3)] transition-all"
+                        className="px-1.5 py-0.5 rounded-md bg-black/60 border border-white/10 text-gray-300 text-[8.5px] sm:text-[9.5px] font-mono hover:border-[#00f0ff]/50 hover:text-[#00f0ff] hover:shadow-[0_0_8px_rgba(0,240,255,0.3)] transition-all"
                       >
                         {tech}
                       </span>

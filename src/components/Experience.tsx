@@ -21,6 +21,7 @@ interface ExperienceItem {
   role: string;
   duration: string;
   icon: LucideIcon;
+  logo?: string;
   details: React.ReactNode[];
   skills: string[];
   dotColor: string;
@@ -35,11 +36,35 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    id: 0,
+    company: "Sapiencia.AI",
+    role: "AI / Machine Learning Intern",
+    duration: "November 2026 – Present",
+    icon: Briefcase,
+    logo: "/sapiencia_icon.png",
+    details: [
+      "Currently working as an AI / Machine Learning Intern at Sapiencia.AI, contributing to the development of SapienShield, an AI-powered cybersecurity project.",
+      "Working on balanced dataset generation for newly introduced risk categories to support reliable machine learning model development.",
+      "Exploring secure remote Linux workstation environments using Tailscale, SSH, and Ubuntu.",
+      "Contributing to dataset and machine learning model version control and organization.",
+      "Collaborating on cybersecurity components involving input scanning, sensitive information detection, and AI-based risk classification."
+    ],
+    skills: ["Python", "MachineLearning", "Cybersecurity", "Ubuntu", "Linux", "Tailscale", "SSH", "Git", "AI"],
+    dotColor: "border-[#00f0ff] text-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.4)]",
+    badgeBorder: "border-[#00f0ff]/30 text-[#00f0ff] bg-[#00f0ff]/10",
+    bulletColor: "text-[#00f0ff]",
+    shadowColor: "hover:border-[#00f0ff]/40 hover:shadow-[0_0_25px_rgba(0,240,255,0.15)]",
+    statusBadge: "Currently Working",
+    statusBadgeColor: "bg-[#00ffa3]/10 border-[#00ffa3]/30 text-[#00ffa3] shadow-[0_0_12px_rgba(0,255,163,0.15)]",
+    statusPulseColor: "bg-[#00ffa3]",
+  },
+  {
     id: 1,
     company: "GoPerch Innovations Pvt. Ltd.",
     role: "Full Stack Developer Intern",
     duration: "May 2026 – July 2026",
     icon: Briefcase,
+    logo: "/goperch_logo_final_v5.png",
     details: [
       "Successfully completed a Full Stack Developer Internship at GoPerch Innovations Pvt. Ltd.",
       "Developed and maintained enterprise-grade web applications using React, Next.js, FastAPI, SQLAlchemy, and PostgreSQL.",
@@ -250,16 +275,16 @@ export default function Experience() {
                   {/* Header info */}
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 mb-3">
                     <div className="flex items-center gap-3">
-                      {exp.id === 1 && (
+                      {exp.logo && (
                         <div 
                           onMouseEnter={() => {
                             try { sounds.playPowerUp(); } catch {}
                           }}
-                          className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040814] border border-[#00f0ff]/40 p-1.5 flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(0,240,255,0.35)] group/bird cursor-pointer overflow-hidden"
-                          title="GoPerch Cyber Bird"
+                          className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040814] border border-[#00f0ff]/40 p-1.5 flex items-center justify-center flex-shrink-0 shadow-[0_0_20px_rgba(0,240,255,0.35)] group/logo cursor-pointer overflow-hidden"
+                          title={exp.company}
                         >
                           {/* Radial Cyber Ambient Glow */}
-                          <div className="absolute inset-0 bg-gradient-to-tr from-[#00f0ff]/20 via-[#8a2be2]/15 to-[#ff007f]/20 rounded-2xl blur-md group-hover/bird:opacity-100 transition-opacity" />
+                          <div className="absolute inset-0 bg-gradient-to-tr from-[#00f0ff]/20 via-[#8a2be2]/15 to-[#ff007f]/20 rounded-2xl blur-md group-hover/logo:opacity-100 transition-opacity" />
 
                           {/* Pulsing Cyber Energy Ring */}
                           <motion.div
@@ -279,7 +304,7 @@ export default function Experience() {
                           <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#00f0ff] pointer-events-none" />
                           <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#ff007f] pointer-events-none" />
 
-                          {/* Dynamic Running / Soaring Bird Body */}
+                          {/* Dynamic Running / Soaring Logo Body */}
                           <motion.div
                             animate={{
                               y: [0, -3, 2, 0],
@@ -299,8 +324,8 @@ export default function Experience() {
                             className="relative z-10 w-full h-full flex items-center justify-center"
                           >
                             <Image
-                              src="/goperch_logo_final_v5.png"
-                              alt="GoPerch"
+                              src={exp.logo}
+                              alt={exp.company}
                               width={44}
                               height={44}
                               className="object-contain select-none drop-shadow-[0_0_12px_rgba(0,240,255,0.8)] transition-all duration-300"
@@ -310,7 +335,7 @@ export default function Experience() {
 
                           {/* Trailing Cyber Energy Streak on Hover */}
                           <motion.div 
-                            className="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#00f0ff] to-[#ff007f] rounded-full pointer-events-none opacity-0 group-hover/bird:opacity-100 group-hover/bird:translate-x-12 transition-all duration-700"
+                            className="absolute -left-10 top-1/2 -translate-y-1/2 w-20 h-1 bg-gradient-to-r from-transparent via-[#00f0ff] to-[#ff007f] rounded-full pointer-events-none opacity-0 group-hover/logo:opacity-100 group-hover/logo:translate-x-12 transition-all duration-700"
                           />
                         </div>
                       )}

@@ -277,7 +277,7 @@ export default function Sidebar() {
                 {/* HUD Overlay Label */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-[#070c18]/90 border border-[#00f0ff]/40 text-[#00f0ff] font-mono text-xs font-bold shadow-[0_0_20px_rgba(0,240,255,0.3)] backdrop-blur-md whitespace-nowrap pointer-events-none flex items-center gap-2">
                   <Sparkles className="w-3.5 h-3.5 text-[#00ffa3] animate-pulse" />
-                  <span>Vignesh N Salian // ARCHITECT</span>
+                  <span>Vignesh N Salian // AI &amp; FULL STACK DEVELOPER</span>
                 </div>
               </motion.div>
             </motion.div>
